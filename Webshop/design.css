@@ -1,0 +1,30 @@
+body {
+    background-color: rgb(65, 42, 12);
+}
+
+.wrapper .head {
+    background: green;
+    min-height: auto;
+}
+
+.wrapper .body {
+    background: orange;
+    min-height: 20ex;
+}
+
+.wrapper .footer {
+    background: red;
+    min-height: 20ex;
+}
+
+h1 {
+    margin: 0%;
+}
+
+h2 {
+    margin: 0%;
+}
+
+.wrapper br {
+    margin: 100px;
+}
