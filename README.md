@@ -1,4 +1,4 @@
-===================WEBSHOP===================
+=====================================WEBSHOP=====================================
 
 1. Ordnerstrucktur
     1.1 Webshop //enthält alle Datein die für den Webshop nötig sind (html, css, png)
@@ -7,34 +7,34 @@
 
 2. Dateistrucktur
     2.1 HTML
-    
-        <html
-            head
+    ```html
+        <html>
+            <head>
             //hier stehen alle Metadaten und die Verlinkung zum Stylesheet (design.css)
-            </head
-            <body
+            </head>
+            <body>
             //Die nachfolgenen Unterteilungen sind alles Div Klassen
-                <wrapper
+                <wrapper>
                 //Beinhaltet die Seite und verpackt alles
-                    <head
+                    <head>
                     //Der obere Teil der Seite mit Logo und Navbar
-                        <logo
+                        <logo>
                         //Choclatland unser Logo
-                        </logo
+                        </logo>
                         <nav>
                         //Navigation für Startseite, Produktkatalog
-                        </nav
-                    </head
-                    <body
+                        </nav>
+                    </head>
+                    <body>
                     //Der mittlere Teil der Seite, welcher alle Informationen besitzt und in dem das meiste geschrieben wird
-                    </body
-                    <footer
+                    </body>
+                    <footer>
                     //Der untere Teil der Seite, welcher das Impressum und andere Informationen über das Unternehmen enthält
-                    </footer
-                </wrapper
-            </body
-        </html
-
+                    </footer>
+                </wrapper>
+            </body>
+        </html>
+    ```
     2.2 CSS
         //Nico du musst dir da deine eigene Strucktur aufbauen, kannst dich ja vl an Der von der HTML orientiren damit man da leichter einen Überblick hat. Auch kannst du hier hinschreiben zb. welche Überschriftform für welchen Schrift verwendet werden soll, zB. H1 für .head .logo Choclatland
             H2 für .head .nav 
