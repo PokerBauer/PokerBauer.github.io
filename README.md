@@ -10,28 +10,30 @@
     ```html
         <html>
             <head>
-            //hier stehen alle Metadaten und die Verlinkung zum Stylesheet (design.css)
+                //hier stehen alle Metadaten und die Verlinkung zum Stylesheet (design.css)
             </head>
             <body>
-            //Die nachfolgenen Unterteilungen sind alles Div Klassen
-                <wrapper>
-                //Beinhaltet die Seite und verpackt alles
-                    <head>
-                    //Der obere Teil der Seite mit Logo und Navbar
-                        <logo>
-                        //Choclatland unser Logo
-                        </logo>
-                        <nav>
-                        //Navigation für Startseite, Produktkatalog
-                        </nav>
-                    </head>
-                    <body>
-                    //Der mittlere Teil der Seite, welcher alle Informationen besitzt und in dem das meiste geschrieben wird
-                    </body>
-                    <footer>
-                    //Der untere Teil der Seite, welcher das Impressum und andere Informationen über das Unternehmen enthält
-                    </footer>
-                </wrapper>
+                //der eigentliche Seite
+                <div class=wrapper>
+                    //Beinhaltet die Seite und verpackt alles
+                    <div class=head>
+                        //Der obere Teil der Seite mit Logo und Navbar
+                        <div class=logo>
+                            //Choclatland unser Logo
+                        </div>
+                        <div class=nav>
+                            //Navigation für Startseite, Produktkatalog
+                        </div>
+                    </div>
+                    <div class=body>
+                        //Der mittlere Teil der Seite, welcher alle Informationen besitzt
+                        //und in dem das meiste geschrieben wird
+                    </div>
+                    <div class=footer>
+                        //Der untere Teil der Seite, welcher das Impressum und andere
+                        //Informationen über das Unternehmen enthält
+                    </div>
+                </div>
             </body>
         </html>
     ```
