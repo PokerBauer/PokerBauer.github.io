@@ -14,22 +14,22 @@
             </head>
             <body>
                 //der eigentliche Seite
-                <div class=wrapper>
+                <div class= "wrapper">
                     //Beinhaltet die Seite und verpackt alles
-                    <div class=head>
+                    <div class= "head">
                         //Der obere Teil der Seite mit Logo und Navbar
-                        <div class=logo>
+                        <div class= "logo">
                             //Choclatland unser Logo
                         </div>
-                        <div class=nav>
+                        <div class= "nav">
                             //Navigation für Startseite, Produktkatalog
                         </div>
                     </div>
-                    <div class=body>
+                    <div class= "body">
                         //Der mittlere Teil der Seite, welcher alle Informationen besitzt
                         //und in dem das meiste geschrieben wird
                     </div>
-                    <div class=footer>
+                    <div class= "footer">
                         //Der untere Teil der Seite, welcher das Impressum und andere
                         //Informationen über das Unternehmen enthält
                     </div>
