@@ -38,7 +38,7 @@
         </html>
     ```
     2.2 CSS
-        //Nico du musst dir da deine eigene Strucktur aufbauen, kannst dich ja vl an Der von der HTML orientiren damit man da leichter einen Überblick hat. Auch kannst du hier hinschreiben zb. welche Überschriftform für welchen Schrift verwendet werden soll, zB. H1 für .head .logo Choclatland
+        //Nico du musst dir da deine eigene Struktur aufbauen, kannst dich ja vl an Der von der HTML orientiren damit man da leichter einen Überblick hat. Auch kannst du hier hinschreiben zb. welche Überschriftform für welchen Schrift verwendet werden soll, zB. H1 für .head .logo Choclatland
             H2 für .head .nav 
             etc.
             
