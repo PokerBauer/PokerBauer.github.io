@@ -1,7 +1,7 @@
 =====================================WEBSHOP=====================================
 
 1. Ordnerstrucktur
-    1.1 Webshop //enthält alle Datein die für den Webshop nötig sind (html, css, png)
+    1.1 Webshop //enthält alle Datein die für den Webshop nötig sind (html, css, png)<br>
         1.1.1 Images //hier landen alle Bilder und werden mit rellativen Pfaden aufgerufen
         1.1.2 Produkte //hier landen alle Produkt htmls
 
