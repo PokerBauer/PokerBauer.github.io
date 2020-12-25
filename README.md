@@ -36,7 +36,7 @@
                 </div>
             </body>
         </html>
-    ```<br>
+    ```
     2.2 CSS<br>
         //Nico du musst dir da deine eigene Struktur aufbauen, kannst dich ja vl an Der von der HTML orientiren damit man da leichter einen Überblick hat. Auch kannst du<br>
           hier hinschreiben zb. welche Überschriftform für welchen Schrift verwendet werden soll, zB. <br>
