@@ -5,8 +5,8 @@
         1.1.1 Images //hier landen alle Bilder und werden mit rellativen Pfaden aufgerufen<br>
         1.1.2 Produkte //hier landen alle Produkt htmls<br>
 
-2. Dateistrucktur
-    2.1 HTML
+2. Dateistrucktur<br>
+    2.1 HTML<br>
     ```html
         <html>
             <head>
@@ -36,10 +36,12 @@
                 </div>
             </body>
         </html>
-    ```
-    2.2 CSS
-        //Nico du musst dir da deine eigene Struktur aufbauen, kannst dich ja vl an Der von der HTML orientiren damit man da leichter einen Überblick hat. Auch kannst du hier hinschreiben zb. welche Überschriftform für welchen Schrift verwendet werden soll, zB. H1 für .head .logo Choclatland
-            H2 für .head .nav 
+    ```<br>
+    2.2 CSS<br>
+        //Nico du musst dir da deine eigene Struktur aufbauen, kannst dich ja vl an Der von der HTML orientiren damit man da leichter einen Überblick hat. Auch kannst du<br>
+          hier hinschreiben zb. welche Überschriftform für welchen Schrift verwendet werden soll, zB. <br>
+            H1 für .head .logo Choclatland<br>
+            H2 für .head .nav <br>
             etc.
             
         
