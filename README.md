@@ -12,29 +12,33 @@
             <head>
                 //hier stehen alle Metadaten und die Verlinkung zum Stylesheet (design.css)
             </head>
+
+            <div class= "head">
+                //Der obere Teil der Seite mit Logo und Navbar
+                <div class= "logo">
+                    //Choclatland unser Logo
+                </div>
+                <div class= "nav">
+                    //Navigation für Startseite, Produktkatalog
+                </div>
+            </div>
+
             <body>
-                //der eigentliche Seite
+                //die eigentliche Seite
                 <div class= "wrapper">
                     //Beinhaltet die Seite und verpackt alles
-                    <div class= "head">
-                        //Der obere Teil der Seite mit Logo und Navbar
-                        <div class= "logo">
-                            //Choclatland unser Logo
-                        </div>
-                        <div class= "nav">
-                            //Navigation für Startseite, Produktkatalog
-                        </div>
-                    </div>
                     <div class= "body">
                         //Der mittlere Teil der Seite, welcher alle Informationen besitzt
                         //und in dem das meiste geschrieben wird
                     </div>
-                    <div class= "footer">
-                        //Der untere Teil der Seite, welcher das Impressum und andere
-                        //Informationen über das Unternehmen enthält
-                    </div>
+                    
                 </div>
             </body>
+            
+            <div class= "footer">
+                //Der untere Teil der Seite, welcher das Impressum und andere
+                //Informationen über das Unternehmen enthält
+            </div>
         </html>
     ```
     2.2 CSS<br>
