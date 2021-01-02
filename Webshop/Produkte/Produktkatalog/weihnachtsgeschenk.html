@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+
 <script src='https://kit.fontawesome.com/a076d05399.js'></script>
 <style>
 
@@ -39,9 +40,10 @@
 }
 
 /* Table */
-.table{
+.table {
   table-layout: fixed; 
 }
+
 .table b{
   font-family: avenir-lt-w01_35-light1475496, sans-serif;
   color: #c78b7b;font-size: 15px;
@@ -144,6 +146,15 @@
   display: none;
 }
 
+.subElem{
+  float: bottom;
+  max-width: 200px;
+}
+
+.name{
+  height: 50px;
+}
+
 .show {
   display: block;
 }
@@ -169,11 +180,11 @@
 
 <div class="header"><p>GRATISVERSAND AB 20€ INNERHALB MAGDEBURG</p></div>
 
+<!-- Navigation bar -->
 <div class="navbar">
   <a href="logo">CHOCOLATE LAND</a>  
   <button class="reg_btn" onclick="window.location.href='https://lauranguyen98.github.io/EWIF/webshop'">Startseite</button>
   
-
   <div class="dropdown">
     <button class="dropbtn">Produkte</button>
     <div class="dropdown-content">
@@ -182,23 +193,22 @@
     <a href="https://lauranguyen98.github.io/EWIF/weihnachtsgeschenk">WEIHNACHTSGESCHENK</a>
     </div>
  </div>
- 
- <button class="reg_btn">Über uns</button>
- <button class="reg_btn">Warenkorb  <i class='fas fa-shopping-bag'></i></button>
-
+    <button class="reg_btn">Über uns</button>
+    <button class="reg_btn">Warenkorb  <i class='fas fa-shopping-bag'></i></button>
 </div>
 
-<div class="row"><br><br>PRALINEN</div>
+<!-- Row -->
+<div class="row"><br><br>WEIHNACHTSGESCHENK</div>
 
 <div class="table">
 <table>
 <tr>
 
-<td style="background-color: #fffaec; width: 300px; vertical-align: top; padding-left: 25px;">
+<td style="background-color: #fffaec; width: 200px; vertical-align: top; padding-left: 25px;">
 <!-- Control buttons -->
 <div id="myBtnContainer">
   <b>Sortiment</b><br/>
-  <button class="filter_btn active" onclick="filterSelection('all')"> Alle Pralinen</button><br/><br/>
+  <button class="filter_btn active" onclick="filterSelection('all')"> Alle Riegeln & Tafeln</button><br/><br/>
   
   <b>Schokoladetype</b><br/>
   <button class="filter_btn" onclick="filterSelection('vollmilch')"> Vollmilch</button><br/>
@@ -207,102 +217,87 @@
   <button class="filter_btn" onclick="filterSelection('ohnezucker')"> Ohne Zuckerzusatz</button><br/><br/>
   
   <b>Preis</b><br/>
-  <button class="filter_btn" onclick="filterSelection('010')"> €0 - €10</button><br/>
-  <button class="filter_btn" onclick="filterSelection('1020')"> €10 - €20</button><br/>
-  <button class="filter_btn" onclick="filterSelection('2050')"> €20 - €50</button><br/>
-  <button class="filter_btn" onclick="filterSelection('50100')"> €50 - €100</button><br/>
+  <button class="filter_btn" onclick="filterSelection('1')"> €0 - €10</button><br/>
+  <button class="filter_btn" onclick="filterSelection('2')"> €10 - €20</button><br/>
+  <button class="filter_btn" onclick="filterSelection('3')"> €20 - €50</button><br/>
+  <button class="filter_btn" onclick="filterSelection('4')"> €50 - €100</button><br/>
 </div>
 </td>
 
-<td style=" width: 700px;">  
+<!-- Right -->
+<td style=" width: 800px;">  
   <div class="container">
   
-  <div class="filterDiv vollmilch 010">
-  <table>
-	<a href="https://lauranguyen98.github.io/EWIF/petit" style="text-decoration: none;color:#272521;">
-	 <tr><img src="https://raw.githubusercontent.com/lauranguyen98/lauranguyen98.github.io/master/EWIF/pictures/petit.jpg" alt="petit_coeur_vanille" width="200" height="200"></tr>
-     <tr><p style="text-align:center;font-family: avenir-lt-w01_35-light1475496, sans-serif;">Petit Coeur Vanille</p></tr>
-	 <tr><p style="text-align:center;font-family: avenir-lt-w01_35-light1475496, sans-serif;">9,20€</p></tr>
+  <div class="filterDiv vollmilch weiß zartbitter 3">
+	<a href="" style="text-decoration: none;color:#272521;">
+	 <div class="subElem"><img src="https://raw.githubusercontent.com/lauranguyen98/lauranguyen98.github.io/master/EWIF/pictures/celloball.jpg" alt="cello_christmas_balls" width="200" height="200"></div>
+     <div class="subElem name"><p style="text-align:center;font-family: avenir-lt-w01_35-light1475496, sans-serif;">Leonidas Cello<br/>Christmas Balls</p></div>
+	 <div class="subElem"><p style="text-align:center;font-family: avenir-lt-w01_35-light1475496, sans-serif;">22,30€</p></div>
 	</a>
-	 <tr><button class="addbutton">In den Warenkorb</button></tr>
-  </table>
+	 <div class="subElem"><button class="addbutton">In den Warenkorb</button></div>
   </div>
   
-  <div class="filterDiv weiß ohnezucker 010">
-  <table>
+  <div class="filterDiv vollmilch weiß zartbitter 3">
 	<a href="" style="text-decoration: none;color:#272521;">
-	 <tr><img src="https://raw.githubusercontent.com/lauranguyen98/lauranguyen98.github.io/master/EWIF/pictures/manonohnezucker.jpg" alt="manon" width="200" height="200"></tr>
-     <tr><p style="text-align:center;font-family: avenir-lt-w01_35-light1475496, sans-serif;">Manon</p></tr>
-	 <tr><p style="text-align:center;font-family: avenir-lt-w01_35-light1475496, sans-serif;">9,20€</p></tr>
+	 <div class="subElem"><img src="https://raw.githubusercontent.com/lauranguyen98/lauranguyen98.github.io/master/EWIF/pictures/kollektion.jpg" alt="box_dark_cranberry" width="200" height="200"></div>
+     <div class="subElem name"><p style="text-align:center;font-family: avenir-lt-w01_35-light1475496, sans-serif;">Leonidas Weihnachtsballotin<br/>Kollektion</p></div>
+	 <div class="subElem"><p style="text-align:center;font-family: avenir-lt-w01_35-light1475496, sans-serif;">22,30€</p></div>
 	</a>
-	 <tr><button class="addbutton">In den Warenkorb</button></tr>
-  </table>
+	 <div class="subElem"><button class="addbutton">In den Warenkorb</button></div>
   </div>
   
-  <div class="filterDiv weiß ohnezucker 010">
-  <table>
+  <div class="filterDiv vollmilch weiß zartbitter 2">
 	<a href="" style="text-decoration: none;color:#272521;">
-	 <tr><img src="https://raw.githubusercontent.com/lauranguyen98/lauranguyen98.github.io/master/EWIF/pictures/pralinesouffleohnezucker.jpg" alt="praline_riz_souffle" width="200" height="200"></tr>
-     <tr><p style="text-align:center;font-family: avenir-lt-w01_35-light1475496, sans-serif;">Praliné Riz Soufflé</p></tr>
-	 <tr><p style="text-align:center;font-family: avenir-lt-w01_35-light1475496, sans-serif;">9,20€</p></tr>
+	 <div class="subElem"><img src="https://raw.githubusercontent.com/lauranguyen98/lauranguyen98.github.io/master/EWIF/pictures/holzkiste.jpg" alt="riegel_weiß_mocha_perlen" width="200" height="200"></div>
+     <div class="subElem name"><p style="text-align:center;font-family: avenir-lt-w01_35-light1475496, sans-serif;">Leonidas Holzkiste<br/>mit Likörpralinen</p></div>
+	 <div class="subElem"><p style="text-align:center;font-family: avenir-lt-w01_35-light1475496, sans-serif;">18,80€</p></div>
 	</a>
-	 <tr><button class="addbutton">In den Warenkorb</button></tr>
-  </table>
+	 <div class="subElem"><button class="addbutton">In den Warenkorb</button></div>
   </div>
   
-  <div class="filterDiv zartbitter ohnezucker 010">
-  <table>
+  <div class="filterDiv vollmilch weiß zartbitter 4">
 	<a href="" style="text-decoration: none;color:#272521;">
-	 <tr><img src="https://raw.githubusercontent.com/lauranguyen98/lauranguyen98.github.io/master/EWIF/pictures/ganacheohnezucker.jpg" alt="ganache_vanille" width="200" height="200"></tr>
-     <tr><p style="text-align:center;font-family: avenir-lt-w01_35-light1475496, sans-serif;">Ganache Vanille</p></tr>
-	 <tr><p style="text-align:center;font-family: avenir-lt-w01_35-light1475496, sans-serif;">9,20€</p></tr>
+	 <div class="subElem"><img src="https://raw.githubusercontent.com/lauranguyen98/lauranguyen98.github.io/master/EWIF/pictures/delight.jpg" alt="chocolate_delight" width="200" height="200"></div>
+     <div class="subElem name"><p style="text-align:center;font-family: avenir-lt-w01_35-light1475496, sans-serif;">Leonidas Chocolate Delight</p></div>
+	 <div class="subElem"><p style="text-align:center;font-family: avenir-lt-w01_35-light1475496, sans-serif;">61,65€</p></div>
 	</a>
-	 <tr><button class="addbutton">In den Warenkorb</button></tr>
-  </table>
-  </div>
-	
-  <div class="filterDiv vollmilch ohnezucker 010">
-  <table>
-	<a href="" style="text-decoration: none;color:#272521;">
-	 <tr><img src="https://raw.githubusercontent.com/lauranguyen98/lauranguyen98.github.io/master/EWIF/pictures/pralineohnezucker.jpg" alt="praline" width="200" height="200"></tr>
-     <tr><p style="text-align:center;font-family: avenir-lt-w01_35-light1475496, sans-serif;">Praliné</p></tr>
-	 <tr><p style="text-align:center;font-family: avenir-lt-w01_35-light1475496, sans-serif;">9,20€</p></tr>
-	</a>
-	 <tr><button class="addbutton">In den Warenkorb</button></tr>
-  </table>
+	 <div class="subElem"><button class="addbutton">In den Warenkorb</button></div>
   </div>
   
-  <div class="filterDiv zartbitter ohnezucker 010">
-  <table>
+  <div class="filterDiv vollmilch weiß zartbitter 4">
 	<a href="" style="text-decoration: none;color:#272521;">
-	 <tr><img src="https://raw.githubusercontent.com/lauranguyen98/lauranguyen98.github.io/master/EWIF/pictures/pralinenibsohnezucker.jpg" alt="praline_nibs" width="200" height="200"></tr>
-     <tr><p style="text-align:center;font-family: avenir-lt-w01_35-light1475496, sans-serif;">Praliné Nibs</p></tr>
-	 <tr><p style="text-align:center;font-family: avenir-lt-w01_35-light1475496, sans-serif;">9,20€</p></tr>
+	 <div class="subElem"><img src="https://raw.githubusercontent.com/lauranguyen98/lauranguyen98.github.io/master/EWIF/pictures/deluxe.jpg" alt="christmas_deluxe" width="200" height="200"></div>
+     <div class="subElem name"><p style="text-align:center;font-family: avenir-lt-w01_35-light1475496, sans-serif;">Leonidas Christmas Deluxe</p></div>
+	 <div class="subElem"><p style="text-align:center;font-family: avenir-lt-w01_35-light1475496, sans-serif;">85,40€</p></div>
 	</a>
-	 <tr><button class="addbutton">In den Warenkorb</button></tr>
-  </table>
+	 <div class="subElem"><button class="addbutton">In den Warenkorb</button></div>
   </div>
   
-  <div class="filterDiv zartbitter 010">
-  <table>
+  <div class="filterDiv vollmilch weiß zartbitter 3">
 	<a href="" style="text-decoration: none;color:#272521;">
-	 <tr><img src="https://raw.githubusercontent.com/lauranguyen98/lauranguyen98.github.io/master/EWIF/pictures/mediantd.jpg" alt="mediant_dark" width="200" height="200"></tr>
-     <tr><p style="text-align:center;font-family: avenir-lt-w01_35-light1475496, sans-serif;">Mediant</p></tr>
-	 <tr><p style="text-align:center;font-family: avenir-lt-w01_35-light1475496, sans-serif;">9,20€</p></tr>
+	 <div class="subElem"><img src="https://raw.githubusercontent.com/lauranguyen98/lauranguyen98.github.io/master/EWIF/pictures/liebhaber.jpg" alt="riegel_gesalzenem_karamell" width="200" height="200"></div>
+     <div class="subElem name"><p style="text-align:center;font-family: avenir-lt-w01_35-light1475496, sans-serif;">Leonidas Manon Liebhaber</p></div>
+	 <div class="subElem"><p style="text-align:center;font-family: avenir-lt-w01_35-light1475496, sans-serif;">45,90€</p></div>
 	</a>
-	 <tr><button class="addbutton">In den Warenkorb</button></tr>
-  </table>
+	 <div class="subElem"><button class="addbutton">In den Warenkorb</button></div>
   </div>
   
-  <div class="filterDiv vollmilch 010">
-  <table>
+  <div class="filterDiv vollmilch weiß zartbitter 4">
 	<a href="" style="text-decoration: none;color:#272521;">
-	 <tr><img src="https://raw.githubusercontent.com/lauranguyen98/lauranguyen98.github.io/master/EWIF/pictures/mediantm.jpg" alt="mediant_milk" width="200" height="200"></tr>
-     <tr><p style="text-align:center;font-family: avenir-lt-w01_35-light1475496, sans-serif;">Mediant</p></tr>
-	 <tr><p style="text-align:center;font-family: avenir-lt-w01_35-light1475496, sans-serif;">9,20€</p></tr>
+	 <div class="subElem"><img src="https://raw.githubusercontent.com/lauranguyen98/lauranguyen98.github.io/master/EWIF/pictures/schokolade-geschenkkorb-blau.jpg" alt="geschenkkorb_blau" width="200" height="200"></div>
+     <div class="subElem name"><p style="text-align:center; font-family: avenir-lt-w01_35-light1475496, sans-serif;">Leonidas Geschenkkorb Blau</p></div>
+	 <div class="subElem"><p style="text-align:center; font-family: avenir-lt-w01_35-light1475496, sans-serif;">85,95€</p></div>
 	</a>
-	 <tr><button class="addbutton">In den Warenkorb</button></tr>
-  </table>
+	 <div class="subElem"><button class="addbutton">In den Warenkorb</button></div>
+  </div>
+  
+  <div class="filterDiv vollmilch weiß zartbitter 4">
+	<a href="" style="text-decoration: none;color:#272521;">
+	 <div class="subElem"><img src="https://raw.githubusercontent.com/lauranguyen98/lauranguyen98.github.io/master/EWIF/pictures/colourful-gift-hamper.jpg" alt="farbenfrohen_geschenkkorb" width="200" height="200"></div>
+     <div class="subElem name"><p style="text-align:center;font-family: avenir-lt-w01_35-light1475496, sans-serif;">Leonidas farbenfrohen Geschenkkorb</p></div>
+	 <div class="subElem"><p style="text-align:center;font-family: avenir-lt-w01_35-light1475496, sans-serif;">88,80€</p></div>
+	</a>
+	 <div class="subElem"><button class="addbutton">In den Warenkorb</button></div>
   </div>
   
 </div>
@@ -312,6 +307,7 @@
 </tr>
 </table>
 </div>
+
 
 <!-- Footer -->
 <div class="footer">
