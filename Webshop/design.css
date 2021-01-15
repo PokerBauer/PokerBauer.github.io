@@ -116,6 +116,15 @@ body,
   display: inline-block;
   background-image:linear-gradient(#4f2c11, #ffeeb8);  
 }
+.produktbild {
+width: 25%;
+  height: 250px;
+  border:  2px solid rgba(0,0,0,0.8);
+  margin-top: 10px;
+  margin-left: 6%;
+  display: inline-block;
+  background-image:linear-gradient(#4f2c11, #ffeeb8);  
+}
 .angebot:hover {
 	border: 2px solid red;
 }
