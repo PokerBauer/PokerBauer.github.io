@@ -154,7 +154,7 @@ if(TestObWarenkorb) { //checkt ob es die Warenkorb seite ist
 
 /*
 TODO:
-58: anpassen an richtige Preise + richtige Bildnamen und ß schreibbar machen
+58: anpassen an richtige Preise + richtige Bildnamen und ß schreibbar machen + 58 die tags auf die neuen 15 anpassen
 145: €, ß in html ordentlich anzeigen lassen
 160+: Die Buttons zum entfernen, +1 und -1 müssen noch entwickelt werden
 -> Funktion in Funktion? //rausfinden wie zugriff auf Button innerhalb einer Textausgabe funktionier -> notfalls umschreiben!
