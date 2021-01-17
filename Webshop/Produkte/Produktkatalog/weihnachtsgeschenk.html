@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Title</title>
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <style>
+        /* Style the header */
+        
+        .header {
+            padding: 1px 110px;
+            text-align: center;
+            background-color: #fffaec;
+            font-size: 15px;
+            font-family: avenir-lt-w01_35-light1475496, sans-serif;
+            color: #756F63;
+        }
+        /* Navigation bar */
+        
+        .navbar {
+            background: #f4b5a3;
+        }
+        
+        .navbar a {
+            padding: 30px 40px;
+            float: left;
+            color: white;
+            font-size: 23px;
+            line-height: 1.4em;
+            font-family: avenir-lt-w01_35-light1475496, sans-serif;
+            text-align: center;
+            text-decoration: none;
+            /* Remove underline */
+        }
+        /* Row */
+        
+        .row {
+            padding: 20px 110px;
+            text-align: center;
+            color: #c78b7b;
+            font-family: avenir-lt-w01_35-light1475496, sans-serif;
+            font-size: 40px;
+        }
+        /* Table */
+        
+        .table {
+            table-layout: fixed;
+        }
+        
+        .table b {
+            font-family: avenir-lt-w01_35-light1475496, sans-serif;
+            color: #c78b7b;
+            font-size: 15px;
+        }
+        /* Footer */
+        
+        .footer {
+            padding: 20px;
+            text-align: center;
+            background: #f4b5a3;
+        }
+        /* IndenWarenkorb Button */
+        
+        .addbutton {
+            line-height: 1.5;
+            display: block;
+            border: solid;
+            ;
+            outline: 0;
+            padding: 8px;
+            background-color: white;
+            cursor: pointer;
+            width: 100%;
+            font-size: 15px;
+            text-align: center;
+            font-family: avenir-lt-w01_35-light1475496, sans-serif;
+            color: #272521;
+        }
+        /* Regular Button */
+        
+        .reg_btn {
+            background-color: #f4b5a3;
+            color: white;
+            padding: 30px 63px;
+            font-size: 23px;
+            font-family: avenir-lt-w01_35-light1475496, sans-serif;
+            line-height: 1.4em;
+            border: none;
+        }
+        /* Filter Button */
+        
+        .filter_btn {
+            background-color: #fffaec;
+            color: black;
+            padding: 15px 1px;
+            font-family: avenir-lt-w01_35-light1475496, sans-serif;
+            font-size: 15px;
+            line-height: 1.4em;
+            border: none;
+            outline: none;
+        }
+        
+        .filter_btn:hover {
+            text-decoration: underline;
+        }
+        /* Dropdown Button */
+        
+        .dropbtn {
+            background-color: #f4b5a3;
+            color: white;
+            padding: 30px 63px;
+            font-size: 23px;
+            font-family: avenir-lt-w01_35-light1475496, sans-serif;
+            line-height: 1.4em;
+            border: none;
+        }
+        /* The container <div> - needed to position the dropdown content */
+        
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+        /* Dropdown Content (Hidden by Default) */
+        
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: white;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+        }
+        /* Links inside the dropdown */
+        
+        .dropdown-content a {
+            color: #c78b7b;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+        /* Underline dropdown links on hover */
+        
+        .dropdown-content a:hover {
+            text-decoration: underline;
+        }
+        /* Show the dropdown menu on hover */
+        
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+        
+        .filterDiv {
+            float: left;
+            display: none;
+        }
+        
+        .subElem {
+            float: bottom;
+            max-width: 200px;
+        }
+        
+        .name {
+            height: 50px;
+        }
+        
+        .show {
+            display: block;
+        }
+        
+        .container {
+            overflow: hidden;
+        }
+        
+        .brmedium {
+            display: block;
+            margin-bottom: 0.5em;
+        }
+        
+        .brlarge {
+            display: block;
+            margin-bottom: 10em;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="header">
+        <p>GRATISVERSAND AB 20€ INNERHALB MAGDEBURG</p>
+    </div>
+
+    <!-- Navigation bar -->
+    <div class="navbar">
+        <a href="logo">CHOCOLATE LAND</a>
+        <button class="reg_btn" onclick="window.location.href='https://lauranguyen98.github.io/EWIF/webshop'">Startseite</button>
+
+        <div class="dropdown">
+            <button class="dropbtn">Produkte</button>
+            <div class="dropdown-content">
+                <a href="https://github.com/PokerBauer/EWIF/edit/main/Webshop/Produkte/Produktkatalog/pralinen">PRALINEN</a>
+                <a href="https://github.com/PokerBauer/EWIF/edit/main/Webshop/Produkte/Produktkatalog/riegelntafeln">RIEGELN & TAFELN</a>
+                <a href="https://github.com/PokerBauer/EWIF/edit/main/Webshop/Produkte/Produktkatalog/weihnachtsgeschenk">WEIHNACHTSGESCHENK</a>
+            </div>
+        </div>
+        <button class="reg_btn">Über uns</button>
+        <button class="reg_btn">Warenkorb  <i class="fas fa-shopping-bag"></i></button>
+    </div>
+
+    <!-- Row -->
+    <div class="row"><br><br>WEIHNACHTSGESCHENK</div>
+
+    <div class="table">
+        <table>
+            <tr>
+
+                <td style="background-color: #fffaec; width: 200px; vertical-align: top; padding-left: 25px;">
+                    <!-- Control buttons -->
+                    <div id="myBtnContainer">
+                        <b>Sortiment</b><br/>
+                        <button class="filter_btn active" onclick="filterSelection('all')"> Alle Riegeln & Tafeln</button><br/><br/>
+
+                        <b>Schokoladetype</b><br/>
+                        <button class="filter_btn" onclick="filterSelection('vollmilch')"> Vollmilch</button><br/>
+                        <button class="filter_btn" onclick="filterSelection('weiß')"> Weißschokolade</button><br/>
+                        <button class="filter_btn" onclick="filterSelection('zartbitter')"> Zartbitter</button><br/>
+                        <button class="filter_btn" onclick="filterSelection('ohnezucker')"> Ohne Zuckerzusatz</button><br/><br/>
+
+                        <b>Preis</b><br/>
+                        <button class="filter_btn" onclick="filterSelection('1')"> €0 - €10</button><br/>
+                        <button class="filter_btn" onclick="filterSelection('2')"> €10 - €20</button><br/>
+                        <button class="filter_btn" onclick="filterSelection('3')"> €20 - €50</button><br/>
+                        <button class="filter_btn" onclick="filterSelection('4')"> €50 - €100</button><br/>
+                    </div>
+                </td>
+
+                <!-- Right -->
+                <td style=" width: 800px;">
+                    <div class="container">
+
+                        <div class="filterDiv vollmilch weiß zartbitter 3">
+                            <a href="" style="text-decoration: none;color:#272521;">
+                                <div class="subElem"><img src="https://raw.githubusercontent.com/lauranguyen98/lauranguyen98.github.io/master/EWIF/pictures/celloball.jpg" alt="cello_christmas_balls" width="200" height="200"></div>
+                                <div class="subElem name">
+                                    <p style="text-align:center;font-family: avenir-lt-w01_35-light1475496, sans-serif;">Leonidas Cello<br/>Christmas Balls</p>
+                                </div>
+                                <div class="subElem">
+                                    <p style="text-align:center;font-family: avenir-lt-w01_35-light1475496, sans-serif;">22,30€</p>
+                                </div>
+                            </a>
+                            <div class="subElem"><button class="addbutton">In den Warenkorb</button></div>
+                        </div>
+
+                        <div class="filterDiv vollmilch weiß zartbitter 3">
+                            <a href="" style="text-decoration: none;color:#272521;">
+                                <div class="subElem"><img src="https://raw.githubusercontent.com/lauranguyen98/lauranguyen98.github.io/master/EWIF/pictures/kollektion.jpg" alt="box_dark_cranberry" width="200" height="200"></div>
+                                <div class="subElem name">
+                                    <p style="text-align:center;font-family: avenir-lt-w01_35-light1475496, sans-serif;">Leonidas Weihnachtsballotin<br/>Kollektion</p>
+                                </div>
+                                <div class="subElem">
+                                    <p style="text-align:center;font-family: avenir-lt-w01_35-light1475496, sans-serif;">22,30€</p>
+                                </div>
+                            </a>
+                            <div class="subElem"><button class="addbutton">In den Warenkorb</button></div>
+                        </div>
+
+                        <div class="filterDiv vollmilch weiß zartbitter 2">
+                            <a href="" style="text-decoration: none;color:#272521;">
+                                <div class="subElem"><img src="https://raw.githubusercontent.com/lauranguyen98/lauranguyen98.github.io/master/EWIF/pictures/holzkiste.jpg" alt="riegel_weiß_mocha_perlen" width="200" height="200"></div>
+                                <div class="subElem name">
+                                    <p style="text-align:center;font-family: avenir-lt-w01_35-light1475496, sans-serif;">Leonidas Holzkiste<br/>mit Likörpralinen</p>
+                                </div>
+                                <div class="subElem">
+                                    <p style="text-align:center;font-family: avenir-lt-w01_35-light1475496, sans-serif;">18,80€</p>
+                                </div>
+                            </a>
+                            <div class="subElem"><button class="addbutton">In den Warenkorb</button></div>
+                        </div>
+
+                        <div class="filterDiv vollmilch weiß zartbitter 4">
+                            <a href="" style="text-decoration: none;color:#272521;">
+                                <div class="subElem"><img src="https://raw.githubusercontent.com/lauranguyen98/lauranguyen98.github.io/master/EWIF/pictures/delight.jpg" alt="chocolate_delight" width="200" height="200"></div>
+                                <div class="subElem name">
+                                    <p style="text-align:center;font-family: avenir-lt-w01_35-light1475496, sans-serif;">Leonidas Chocolate Delight</p>
+                                </div>
+                                <div class="subElem">
+                                    <p style="text-align:center;font-family: avenir-lt-w01_35-light1475496, sans-serif;">61,65€</p>
+                                </div>
+                            </a>
+                            <div class="subElem"><button class="addbutton">In den Warenkorb</button></div>
+                        </div>
+
+                        <div class="filterDiv vollmilch weiß zartbitter 4">
+                            <a href="" style="text-decoration: none;color:#272521;">
+                                <div class="subElem"><img src="https://raw.githubusercontent.com/lauranguyen98/lauranguyen98.github.io/master/EWIF/pictures/deluxe.jpg" alt="christmas_deluxe" width="200" height="200"></div>
+                                <div class="subElem name">
+                                    <p style="text-align:center;font-family: avenir-lt-w01_35-light1475496, sans-serif;">Leonidas Christmas Deluxe</p>
+                                </div>
+                                <div class="subElem">
+                                    <p style="text-align:center;font-family: avenir-lt-w01_35-light1475496, sans-serif;">85,40€</p>
+                                </div>
+                            </a>
+                            <div class="subElem"><button class="addbutton">In den Warenkorb</button></div>
+                        </div>
+
+                        <div class="filterDiv vollmilch weiß zartbitter 3">
+                            <a href="" style="text-decoration: none;color:#272521;">
+                                <div class="subElem"><img src="https://raw.githubusercontent.com/lauranguyen98/lauranguyen98.github.io/master/EWIF/pictures/liebhaber.jpg" alt="riegel_gesalzenem_karamell" width="200" height="200"></div>
+                                <div class="subElem name">
+                                    <p style="text-align:center;font-family: avenir-lt-w01_35-light1475496, sans-serif;">Leonidas Manon Liebhaber</p>
+                                </div>
+                                <div class="subElem">
+                                    <p style="text-align:center;font-family: avenir-lt-w01_35-light1475496, sans-serif;">45,90€</p>
+                                </div>
+                            </a>
+                            <div class="subElem"><button class="addbutton">In den Warenkorb</button></div>
+                        </div>
+
+                        <div class="filterDiv vollmilch weiß zartbitter 4">
+                            <a href="" style="text-decoration: none;color:#272521;">
+                                <div class="subElem"><img src="https://raw.githubusercontent.com/lauranguyen98/lauranguyen98.github.io/master/EWIF/pictures/schokolade-geschenkkorb-blau.jpg" alt="geschenkkorb_blau" width="200" height="200"></div>
+                                <div class="subElem name">
+                                    <p style="text-align:center; font-family: avenir-lt-w01_35-light1475496, sans-serif;">Leonidas Geschenkkorb Blau</p>
+                                </div>
+                                <div class="subElem">
+                                    <p style="text-align:center; font-family: avenir-lt-w01_35-light1475496, sans-serif;">85,95€</p>
+                                </div>
+                            </a>
+                            <div class="subElem"><button class="addbutton">In den Warenkorb</button></div>
+                        </div>
+
+                        <div class="filterDiv vollmilch weiß zartbitter 4">
+                            <a href="" style="text-decoration: none;color:#272521;">
+                                <div class="subElem"><img src="https://raw.githubusercontent.com/lauranguyen98/lauranguyen98.github.io/master/EWIF/pictures/colourful-gift-hamper.jpg" alt="farbenfrohen_geschenkkorb" width="200" height="200"></div>
+                                <div class="subElem name">
+                                    <p style="text-align:center;font-family: avenir-lt-w01_35-light1475496, sans-serif;">Leonidas farbenfrohen Geschenkkorb</p>
+                                </div>
+                                <div class="subElem">
+                                    <p style="text-align:center;font-family: avenir-lt-w01_35-light1475496, sans-serif;">88,80€</p>
+                                </div>
+                            </a>
+                            <div class="subElem"><button class="addbutton">In den Warenkorb</button></div>
+                        </div>
+
+                    </div>
+                </td>
+
+
+            </tr>
+        </table>
+    </div>
+
+
+    <!-- Footer -->
+    <div class="footer">
+        <button class="reg_btn">Impressum</button>
+    </div>
+
+    <script>
+        filterSelection("all")
+
+        function filterSelection(c) {
+            var x, i;
+            x = document.getElementsByClassName("filterDiv");
+            if (c == "all") c = "";
+            for (i = 0; i < x.length; i++) {
+                w3RemoveClass(x[i], "show");
+                if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+            }
+        }
+
+        function w3AddClass(element, name) {
+            var i, arr1, arr2;
+            arr1 = element.className.split(" ");
+            arr2 = name.split(" ");
+            for (i = 0; i < arr2.length; i++) {
+                if (arr1.indexOf(arr2[i]) == -1) {
+                    element.className += " " + arr2[i];
+                }
+            }
+        }
+
+        function w3RemoveClass(element, name) {
+            var i, arr1, arr2;
+            arr1 = element.className.split(" ");
+            arr2 = name.split(" ");
+            for (i = 0; i < arr2.length; i++) {
+                while (arr1.indexOf(arr2[i]) > -1) {
+                    arr1.splice(arr1.indexOf(arr2[i]), 1);
+                }
+            }
+            element.className = arr1.join(" ");
+        }
+
+        // Add active class to the current button (highlight it)
+        var btnContainer = document.getElementById("myBtnContainer");
+        var btns = btnContainer.getElementsByClassName("filter_btn");
+        for (var i = 0; i < btns.length; i++) {
+            btns[i].addEventListener("click", function() {
+                var current = document.getElementsByClassName("active");
+                current[0].className = current[0].className.replace(" active", "");
+                this.className += " active";
+            });
+        }
+    </script>
+
+</body>
+
+</html>
