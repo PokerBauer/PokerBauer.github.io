@@ -4,6 +4,67 @@
 <head>
     <title>Produkte</title>
     <link href="design.css" rel="stylesheet" type="text/css">
+    <style>
+        /* Table */
+        .table {
+            table-layout: fixed;
+        }
+        
+        .table b {
+            font-family: avenir-lt-w01_35-light1475496, sans-serif;
+            color: #c78b7b;
+            font-size: 15px;
+        }
+        
+        /* Filter Button */
+        .filter_btn {
+            background-color: #fffaec;
+            color: black;
+            padding: 15px 1px;
+            font-family: avenir-lt-w01_35-light1475496, sans-serif;
+            font-size: 15px;
+            line-height: 1.4em;
+            border: none;
+            outline: none;
+        }
+        
+        .filter_btn:hover {
+            text-decoration: underline;
+        }
+        
+        
+        .filterDiv {
+            float: left;
+            display: none;
+        }
+        
+        .subElem {
+            float: bottom;
+            max-width: 200px;
+        }
+        
+        .name {
+            height: 50px;
+        }
+        
+        .show {
+            display: block;
+        }
+        
+        .container {
+            overflow: hidden;
+        }
+        
+        .brmedium {
+            display: block;
+            margin-bottom: 0.5em;
+        }
+        
+        .brlarge {
+            display: block;
+            margin-bottom: 8em;
+        }
+    </style>
 </head>
 <!--HEAD-->
 <div class="header"> <img src="Images/warenkorb1.png" alt="logo">
@@ -17,6 +78,515 @@
 </div>
 
 <body>
+    <div class="table">
+        <table>
+            <tr>
+
+                <td style="background-color: #fffaec; width: 200px; vertical-align: top; padding-left: 25px;">
+                    <!-- Control buttons -->
+                    <div id="myBtnContainer">
+					<span class="brlarge"></span>
+                        <b>Sortiment</b><br/>
+                        <button class="filter_btn active" onclick="filterSelection('all')"> Alle anzeigen</button><br/><br/>
+
+                        <b>Pralinen</b><br/>
+                        <button class="filter_btn" onclick="filterSelection('pv')"> Vollmilch</button><br/>
+                        <button class="filter_btn" onclick="filterSelection('pw')"> Weißschokolade</button><br/>
+                        <button class="filter_btn" onclick="filterSelection('pz')"> Zartbitter</button><br/><br/>
+						
+						<b>Tafeln</b><br/>
+                        <button class="filter_btn" onclick="filterSelection('tv')"> Vollmilch</button><br/>
+                        <button class="filter_btn" onclick="filterSelection('tw')"> Weißschokolade</button><br/>
+                        <button class="filter_btn" onclick="filterSelection('tz')"> Zartbitter</button><br/><br/>
+						
+						<b>Weihnachtsgeschenke</b><br/>
+                        <button class="filter_btn" onclick="filterSelection('wa')"> Alle Weihnachtsgeschenke</button><br/>
+
+                    </div>
+                </td>
+
+                <!-- Right -->
+                <td style=" width: 800px; padding: 1px 100px;">
+                    <div class="container">
+                    <span class="brlarge"></span>
+					<!-- Pralinen -->
+                        <div class="filterDiv pv">
+                            <a href="" style="text-decoration: none;color:#272521;">
+                                <div class="subElem"><img src="https://raw.githubusercontent.com/PokerBauer/PokerBauer.github.io/main/Webshop/Images/Pralinen/Vollmilch/Mix_aus_Weiss_und_Vollmilch_Dreierlei.PNG" alt="Mix_aus_Weiss_und_Vollmilch_Dreierlei" width="200" height="200"></div>
+                                <div class="subElem name">
+                                    <p style="text-align:center;font-family: avenir-lt-w01_35-light1475496, sans-serif;">Mix aus Weiss und Vollmilch Dreierlei</p>
+                                </div>
+                                <div class="subElem">
+                                    <p style="text-align:center;font-family: avenir-lt-w01_35-light1475496, sans-serif;">€</p>
+                                </div>
+                            </a>
+                        </div>
+						
+						<div class="filterDiv pv">
+                            <a href="" style="text-decoration: none;color:#272521;">
+                                <div class="subElem"><img src="https://raw.githubusercontent.com/PokerBauer/PokerBauer.github.io/main/Webshop/Images/Pralinen/Vollmilch/Mouse_gefuellte_Praline.PNG" alt="Mouse_gefuellte_Praline" width="200" height="200"></div>
+                                <div class="subElem name">
+                                    <p style="text-align:center;font-family: avenir-lt-w01_35-light1475496, sans-serif;">Mouse gefüllte Praline</p>
+                                </div>
+                                <div class="subElem">
+                                    <p style="text-align:center;font-family: avenir-lt-w01_35-light1475496, sans-serif;">€</p>
+                                </div>
+                            </a>
+                        </div>
+						
+						<div class="filterDiv pv">
+                            <a href="" style="text-decoration: none;color:#272521;">
+                                <div class="subElem"><img src="https://raw.githubusercontent.com/PokerBauer/PokerBauer.github.io/main/Webshop/Images/Pralinen/Vollmilch/Praline_mit_Mouse_und_fluessiger_Schokolade.PNG" alt="Praline_mit_Mouse_und_fluessiger_Schokolade" width="200" height="200"></div>
+                                <div class="subElem name">
+                                    <p style="text-align:center;font-family: avenir-lt-w01_35-light1475496, sans-serif;">Praline mit Mouse und flüssiger Schokolade</p>
+                                </div>
+                                <div class="subElem">
+                                    <p style="text-align:center;font-family: avenir-lt-w01_35-light1475496, sans-serif;">€</p>
+                                </div>
+                            </a>
+                        </div>
+						
+						<div class="filterDiv pv">
+                            <a href="" style="text-decoration: none;color:#272521;">
+                                <div class="subElem"><img src="https://raw.githubusercontent.com/PokerBauer/PokerBauer.github.io/main/Webshop/Images/Pralinen/Vollmilch/Vollmilch_Praline_Erdbeertopping.PNG" alt="Vollmilch_Praline_mit_Erbeertopping" width="200" height="200"></div>
+                                <div class="subElem name">
+                                    <p style="text-align:center;font-family: avenir-lt-w01_35-light1475496, sans-serif;">Vollmilch Praline mit Erdbeertopping</p>
+                                </div>
+                                <div class="subElem">
+                                    <p style="text-align:center;font-family: avenir-lt-w01_35-light1475496, sans-serif;">€</p>
+                                </div>
+                            </a>
+                        </div>
+						
+						<div class="filterDiv pv">
+                            <a href="" style="text-decoration: none;color:#272521;">
+                                <div class="subElem"><img src="https://raw.githubusercontent.com/PokerBauer/PokerBauer.github.io/main/Webshop/Images/Pralinen/Vollmilch/Vollmilch_Praline_mit_Nuss_Karamell_oder_Zartbitter_Topping.PNG" alt="Vollmilch_Praline_mit_Nuss_Karamell_oder_Zartbitter_Topping" width="200" height="200"></div>
+                                <div class="subElem name">
+                                    <p style="text-align:center;font-family: avenir-lt-w01_35-light1475496, sans-serif;">Vollmilch Praline mit Nuss Karamell oder Zartbitter Topping</p>
+                                </div>
+                                <div class="subElem">
+                                    <p style="text-align:center;font-family: avenir-lt-w01_35-light1475496, sans-serif;">€</p>
+                                </div>
+                            </a>
+                        </div>
+						
+						<div class="filterDiv pw">
+                            <a href="" style="text-decoration: none;color:#272521;">
+                                <div class="subElem"><img src="https://raw.githubusercontent.com/PokerBauer/PokerBauer.github.io/main/Webshop/Images/Pralinen/Weiss/Die_weissen_Berge.PNG" alt="Die_weissen_Berge" width="200" height="200"></div>
+                                <div class="subElem name">
+                                    <p style="text-align:center;font-family: avenir-lt-w01_35-light1475496, sans-serif;">Die weißen Berge</p>
+                                </div>
+                                <div class="subElem">
+                                    <p style="text-align:center;font-family: avenir-lt-w01_35-light1475496, sans-serif;">€</p>
+                                </div>
+                            </a>
+                        </div>
+						
+						<div class="filterDiv pw">
+                            <a href="" style="text-decoration: none;color:#272521;">
+                                <div class="subElem"><img src="https://raw.githubusercontent.com/PokerBauer/PokerBauer.github.io/main/Webshop/Images/Pralinen/Weiss/Erdbeertraum.PNG" alt="Erdbeertraum" width="200" height="200"></div>
+                                <div class="subElem name">
+                                    <p style="text-align:center;font-family: avenir-lt-w01_35-light1475496, sans-serif;">Erdbeertraum</p>
+                                </div>
+                                <div class="subElem">
+                                    <p style="text-align:center;font-family: avenir-lt-w01_35-light1475496, sans-serif;">€</p>
+                                </div>
+                            </a>
+                        </div>
+						
+						<div class="filterDiv pw">
+                            <a href="" style="text-decoration: none;color:#272521;">
+                                <div class="subElem"><img src="https://raw.githubusercontent.com/PokerBauer/PokerBauer.github.io/main/Webshop/Images/Pralinen/Weiss/Gefuellte_Praline_mit_Mouse_Topping.PNG" alt="Gefuellte_Praline_mit_Mouse_Topping" width="200" height="200"></div>
+                                <div class="subElem name">
+                                    <p style="text-align:center;font-family: avenir-lt-w01_35-light1475496, sans-serif;">Gefüllte Praline mit Mouse Toppping</p>
+                                </div>
+                                <div class="subElem">
+                                    <p style="text-align:center;font-family: avenir-lt-w01_35-light1475496, sans-serif;">€</p>
+                                </div>
+                            </a>
+                        </div>
+						
+						<div class="filterDiv pw">
+                            <a href="" style="text-decoration: none;color:#272521;">
+                                <div class="subElem"><img src="https://raw.githubusercontent.com/PokerBauer/PokerBauer.github.io/main/Webshop/Images/Pralinen/Weiss/Kokoskugel_mit_Nussfuellung.PNG" alt="Kokoskugel_mit_Nussfuellung" width="200" height="200"></div>
+                                <div class="subElem name">
+                                    <p style="text-align:center;font-family: avenir-lt-w01_35-light1475496, sans-serif;">Kokoskugel mit Nussfüllung</p>
+                                </div>
+                                <div class="subElem">
+                                    <p style="text-align:center;font-family: avenir-lt-w01_35-light1475496, sans-serif;">€</p>
+                                </div>
+                            </a>
+                        </div>
+						
+						<div class="filterDiv pw">
+                            <a href="" style="text-decoration: none;color:#272521;">
+                                <div class="subElem"><img src="https://raw.githubusercontent.com/PokerBauer/PokerBauer.github.io/main/Webshop/Images/Pralinen/Weiss/Praline_mit_Roellchen.PNG" alt="Praline_mit_Roellchen" width="200" height="200"></div>
+                                <div class="subElem name">
+                                    <p style="text-align:center;font-family: avenir-lt-w01_35-light1475496, sans-serif;">Praline mit Röllchen</p>
+                                </div>
+                                <div class="subElem">
+                                    <p style="text-align:center;font-family: avenir-lt-w01_35-light1475496, sans-serif;">€</p>
+                                </div>
+                            </a>
+                        </div>
+						
+						<div class="filterDiv pz">
+                            <a href="" style="text-decoration: none;color:#272521;">
+                                <div class="subElem"><img src="https://raw.githubusercontent.com/PokerBauer/PokerBauer.github.io/main/Webshop/Images/Pralinen/Zartbitter/Drei_Schokokugeln.PNG" alt="Drei_Schokokugeln" width="200" height="200"></div>
+                                <div class="subElem name">
+                                    <p style="text-align:center;font-family: avenir-lt-w01_35-light1475496, sans-serif;">Drei Schokokugeln</p>
+                                </div>
+                                <div class="subElem">
+                                    <p style="text-align:center;font-family: avenir-lt-w01_35-light1475496, sans-serif;">€</p>
+                                </div>
+                            </a>
+                        </div>
+						
+						<div class="filterDiv pz">
+                            <a href="" style="text-decoration: none;color:#272521;">
+                                <div class="subElem"><img src="https://raw.githubusercontent.com/PokerBauer/PokerBauer.github.io/main/Webshop/Images/Pralinen/Zartbitter/Mouse_gefuellt_mit_Erdbeerglasur.PNG" alt="Mouse_gefuellt_mit_Erbeerglasur" width="200" height="200"></div>
+                                <div class="subElem name">
+                                    <p style="text-align:center;font-family: avenir-lt-w01_35-light1475496, sans-serif;">Mouse gefüllt mit Erdbeerglasur</p>
+                                </div>
+                                <div class="subElem">
+                                    <p style="text-align:center;font-family: avenir-lt-w01_35-light1475496, sans-serif;">€</p>
+                                </div>
+                            </a>
+                        </div>
+						
+						<div class="filterDiv pz">
+                            <a href="" style="text-decoration: none;color:#272521;">
+                                <div class="subElem"><img src="https://raw.githubusercontent.com/PokerBauer/PokerBauer.github.io/main/Webshop/Images/Pralinen/Zartbitter/Praline_mit_fluessigem_Kern.PNG" alt="Praline_mit_fluessigem_Kern" width="200" height="200"></div>
+                                <div class="subElem name">
+                                    <p style="text-align:center;font-family: avenir-lt-w01_35-light1475496, sans-serif;">Praline mit flüssigem Kern</p>
+                                </div>
+                                <div class="subElem">
+                                    <p style="text-align:center;font-family: avenir-lt-w01_35-light1475496, sans-serif;">€</p>
+                                </div>
+                            </a>
+                        </div>
+						
+						<div class="filterDiv pz">
+                            <a href="" style="text-decoration: none;color:#272521;">
+                                <div class="subElem"><img src="https://raw.githubusercontent.com/PokerBauer/PokerBauer.github.io/main/Webshop/Images/Pralinen/Zartbitter/Zartbitterkugel_mit_Goldglasur.PNG" alt="Zartbitterkugel_mit_Goldglasur" width="200" height="200"></div>
+                                <div class="subElem name">
+                                    <p style="text-align:center;font-family: avenir-lt-w01_35-light1475496, sans-serif;">Zartbitterkugel mit Goldglasur</p>
+                                </div>
+                                <div class="subElem">
+                                    <p style="text-align:center;font-family: avenir-lt-w01_35-light1475496, sans-serif;">€</p>
+                                </div>
+                            </a>
+                        </div>
+						
+						<div class="filterDiv pz">
+                            <a href="" style="text-decoration: none;color:#272521;">
+                                <div class="subElem"><img src="https://raw.githubusercontent.com/PokerBauer/PokerBauer.github.io/main/Webshop/Images/Pralinen/Zartbitter/Zartbitterpraline.PNG" alt="Zartbitterpraline" width="200" height="200"></div>
+                                <div class="subElem name">
+                                    <p style="text-align:center;font-family: avenir-lt-w01_35-light1475496, sans-serif;">Zartbitterpraline</p>
+                                </div>
+                                <div class="subElem">
+                                    <p style="text-align:center;font-family: avenir-lt-w01_35-light1475496, sans-serif;">€</p>
+                                </div>
+                            </a>
+                        </div>
+                    
+					<!-- Tafeln -->
+					    <div class="filterDiv tv">
+                            <a href="" style="text-decoration: none;color:#272521;">
+                                <div class="subElem"><img src="https://raw.githubusercontent.com/PokerBauer/PokerBauer.github.io/main/Webshop/Images/Tafeln/Vollmilch/Selbstgemachte_Schokolade_mit_Erdbeer_Streuseln_oder_Nuessen.PNG" alt="Selbstgemachte_Schokolade_mit_Erbeer_Streuseln_oder_Nuessen" width="200" height="200"></div>
+                                <div class="subElem name">
+                                    <p style="text-align:center;font-family: avenir-lt-w01_35-light1475496, sans-serif;">Selbstgemachte Schokolade mit Erdbeer Streuseln oder Nüssen</p>
+                                </div>
+                                <div class="subElem">
+                                    <p style="text-align:center;font-family: avenir-lt-w01_35-light1475496, sans-serif;">€</p>
+                                </div>
+                            </a>
+                        </div>
+						
+						<div class="filterDiv tv">
+                            <a href="" style="text-decoration: none;color:#272521;">
+                                <div class="subElem"><img src="https://raw.githubusercontent.com/PokerBauer/PokerBauer.github.io/main/Webshop/Images/Tafeln/Vollmilch/Tafel_Vollmilch.PNG" alt="Tafel_Vollmilch" width="200" height="200"></div>
+                                <div class="subElem name">
+                                    <p style="text-align:center;font-family: avenir-lt-w01_35-light1475496, sans-serif;">Tafel Vollmilch</p>
+                                </div>
+                                <div class="subElem">
+                                    <p style="text-align:center;font-family: avenir-lt-w01_35-light1475496, sans-serif;">€</p>
+                                </div>
+                            </a>
+                        </div>
+						
+						<div class="filterDiv tv">
+                            <a href="" style="text-decoration: none;color:#272521;">
+                                <div class="subElem"><img src="https://raw.githubusercontent.com/PokerBauer/PokerBauer.github.io/main/Webshop/Images/Tafeln/Vollmilch/Tafel_mit_Tafelfuellung.PNG" alt="Tafel_mit_Milchfuellung" width="200" height="200"></div>
+                                <div class="subElem name">
+                                    <p style="text-align:center;font-family: avenir-lt-w01_35-light1475496, sans-serif;">Tafel mit Milchfüllung</p>
+                                </div>
+                                <div class="subElem">
+                                    <p style="text-align:center;font-family: avenir-lt-w01_35-light1475496, sans-serif;">€</p>
+                                </div>
+                            </a>
+                        </div>
+						
+						<div class="filterDiv tv">
+                            <a href="" style="text-decoration: none;color:#272521;">
+                                <div class="subElem"><img src="https://raw.githubusercontent.com/PokerBauer/PokerBauer.github.io/main/Webshop/Images/Tafeln/Vollmilch/Vollmilchschokolade_mit_Nuessen.PNG" alt="Vollmilchschokolade_mit_Nuessen" width="200" height="200"></div>
+                                <div class="subElem name">
+                                    <p style="text-align:center;font-family: avenir-lt-w01_35-light1475496, sans-serif;">Vollmilchschokolade mit Nüssen</p>
+                                </div>
+                                <div class="subElem">
+                                    <p style="text-align:center;font-family: avenir-lt-w01_35-light1475496, sans-serif;">€</p>
+                                </div>
+                            </a>
+                        </div>
+						
+						<div class="filterDiv tv">
+                            <a href="" style="text-decoration: none;color:#272521;">
+                                <div class="subElem"><img src="https://raw.githubusercontent.com/PokerBauer/PokerBauer.github.io/main/Webshop/Images/Tafeln/Vollmilch/Vollmilchschokolade_mit_Nuessen_und_Kokos.PNG" alt="Vollmilchschokolade_mit_Nuessen_und_Kokos" width="200" height="200"></div>
+                                <div class="subElem name">
+                                    <p style="text-align:center;font-family: avenir-lt-w01_35-light1475496, sans-serif;">Vollmilchschokolade mit Nüssen und Kokos</p>
+                                </div>
+                                <div class="subElem">
+                                    <p style="text-align:center;font-family: avenir-lt-w01_35-light1475496, sans-serif;">€</p>
+                                </div>
+                            </a>
+                        </div>
+					    
+						<div class="filterDiv tw">
+                            <a href="" style="text-decoration: none;color:#272521;">
+                                <div class="subElem"><img src="https://raw.githubusercontent.com/PokerBauer/PokerBauer.github.io/main/Webshop/Images/Tafeln/Weiss/Luftschokolade.PNG" alt="Luftschokolade" width="200" height="200"></div>
+                                <div class="subElem name">
+                                    <p style="text-align:center;font-family: avenir-lt-w01_35-light1475496, sans-serif;">Luftschokolade</p>
+                                </div>
+                                <div class="subElem">
+                                    <p style="text-align:center;font-family: avenir-lt-w01_35-light1475496, sans-serif;">€</p>
+                                </div>
+                            </a>
+                        </div>
+						
+						<div class="filterDiv tw">
+                            <a href="" style="text-decoration: none;color:#272521;">
+                                <div class="subElem"><img src="https://raw.githubusercontent.com/PokerBauer/PokerBauer.github.io/main/Webshop/Images/Tafeln/Weiss/Tafeln_mit_Fruechten.PNG" alt="Tafeln_mit_Fruechten" width="200" height="200"></div>
+                                <div class="subElem name">
+                                    <p style="text-align:center;font-family: avenir-lt-w01_35-light1475496, sans-serif;">Tafeln mit Früchten</p>
+                                </div>
+                                <div class="subElem">
+                                    <p style="text-align:center;font-family: avenir-lt-w01_35-light1475496, sans-serif;">€</p>
+                                </div>
+                            </a>
+                        </div>
+						
+						<div class="filterDiv tw">
+                            <a href="" style="text-decoration: none;color:#272521;">
+                                <div class="subElem"><img src="https://raw.githubusercontent.com/PokerBauer/PokerBauer.github.io/main/Webshop/Images/Tafeln/Weiss/Weiss_und_Vollmilch_mit_Erdbeer.PNG" alt="Weiss_und_Vollmilch_mit_Erdbeer" width="200" height="200"></div>
+                                <div class="subElem name">
+                                    <p style="text-align:center;font-family: avenir-lt-w01_35-light1475496, sans-serif;">Weiß und Vollmilch mit Erdbeer</p>
+                                </div>
+                                <div class="subElem">
+                                    <p style="text-align:center;font-family: avenir-lt-w01_35-light1475496, sans-serif;">€</p>
+                                </div>
+                            </a>
+                        </div>
+						
+						<div class="filterDiv tw">
+                            <a href="" style="text-decoration: none;color:#272521;">
+                                <div class="subElem"><img src="https://raw.githubusercontent.com/PokerBauer/PokerBauer.github.io/main/Webshop/Images/Tafeln/Weiss/Weisse_Schokolade_mit_Nuessen.PNG" alt="Weisse_Schokolade_mit_Nuessen" width="200" height="200"></div>
+                                <div class="subElem name">
+                                    <p style="text-align:center;font-family: avenir-lt-w01_35-light1475496, sans-serif;">Weiße Schokolade mit Nüssen</p>
+                                </div>
+                                <div class="subElem">
+                                    <p style="text-align:center;font-family: avenir-lt-w01_35-light1475496, sans-serif;">€</p>
+                                </div>
+                            </a>
+                        </div>
+						
+						<div class="filterDiv tw">
+                            <a href="" style="text-decoration: none;color:#272521;">
+                                <div class="subElem"><img src="https://raw.githubusercontent.com/PokerBauer/PokerBauer.github.io/main/Webshop/Images/Tafeln/Weiss/Weisse_Tafel.PNG" alt="Weisse_Tafel" width="200" height="200"></div>
+                                <div class="subElem name">
+                                    <p style="text-align:center;font-family: avenir-lt-w01_35-light1475496, sans-serif;">Weiße Tafel</p>
+                                </div>
+                                <div class="subElem">
+                                    <p style="text-align:center;font-family: avenir-lt-w01_35-light1475496, sans-serif;">€</p>
+                                </div>
+                            </a>
+                        </div>
+                        
+						<div class="filterDiv tz">
+                            <a href="" style="text-decoration: none;color:#272521;">
+                                <div class="subElem"><img src="https://raw.githubusercontent.com/PokerBauer/PokerBauer.github.io/main/Webshop/Images/Tafeln/Zartbitter/Brownie_Zartbittertafel.PNG" alt="Brownie_Zartbittertafel" width="200" height="200"></div>
+                                <div class="subElem name">
+                                    <p style="text-align:center;font-family: avenir-lt-w01_35-light1475496, sans-serif;">Brownie Zartbittertafel</p>
+                                </div>
+                                <div class="subElem">
+                                    <p style="text-align:center;font-family: avenir-lt-w01_35-light1475496, sans-serif;">€</p>
+                                </div>
+                            </a>
+                        </div>
+						
+						<div class="filterDiv tz">
+                            <a href="" style="text-decoration: none;color:#272521;">
+                                <div class="subElem"><img src="https://raw.githubusercontent.com/PokerBauer/PokerBauer.github.io/main/Webshop/Images/Tafeln/Zartbitter/Chili_Schokolade.PNG" alt="Chili_Schokolade" width="200" height="200"></div>
+                                <div class="subElem name">
+                                    <p style="text-align:center;font-family: avenir-lt-w01_35-light1475496, sans-serif;">Chili Schokolade</p>
+                                </div>
+                                <div class="subElem">
+                                    <p style="text-align:center;font-family: avenir-lt-w01_35-light1475496, sans-serif;">€</p>
+                                </div>
+                            </a>
+                        </div>
+						
+						<div class="filterDiv tz">
+                            <a href="" style="text-decoration: none;color:#272521;">
+                                <div class="subElem"><img src="https://raw.githubusercontent.com/PokerBauer/PokerBauer.github.io/main/Webshop/Images/Tafeln/Zartbitter/Lindtschokolade.PNG" alt="Lindtschokolade" width="200" height="200"></div>
+                                <div class="subElem name">
+                                    <p style="text-align:center;font-family: avenir-lt-w01_35-light1475496, sans-serif;">Lindtschokolade</p>
+                                </div>
+                                <div class="subElem">
+                                    <p style="text-align:center;font-family: avenir-lt-w01_35-light1475496, sans-serif;">€</p>
+                                </div>
+                            </a>
+                        </div>
+						
+						<div class="filterDiv tz">
+                            <a href="" style="text-decoration: none;color:#272521;">
+                                <div class="subElem"><img src="https://raw.githubusercontent.com/PokerBauer/PokerBauer.github.io/main/Webshop/Images/Tafeln/Zartbitter/Zartbitterschokolade_mit_Nuessen.PNG" alt="Zartbitterschokolade_mit_Nuessen" width="200" height="200"></div>
+                                <div class="subElem name">
+                                    <p style="text-align:center;font-family: avenir-lt-w01_35-light1475496, sans-serif;">Zartbitterschokolade mit Nüssen</p>
+                                </div>
+                                <div class="subElem">
+                                    <p style="text-align:center;font-family: avenir-lt-w01_35-light1475496, sans-serif;">€</p>
+                                </div>
+                            </a>
+                        </div>
+						
+						<div class="filterDiv tz">
+                            <a href="" style="text-decoration: none;color:#272521;">
+                                <div class="subElem"><img src="https://raw.githubusercontent.com/PokerBauer/PokerBauer.github.io/main/Webshop/Images/Tafeln/Zartbitter/Zartbittertafel.PNG" alt="Zartbittertafel" width="200" height="200"></div>
+                                <div class="subElem name">
+                                    <p style="text-align:center;font-family: avenir-lt-w01_35-light1475496, sans-serif;">Zartbittertafel</p>
+                                </div>
+                                <div class="subElem">
+                                    <p style="text-align:center;font-family: avenir-lt-w01_35-light1475496, sans-serif;">€</p>
+                                </div>
+                            </a>
+                        </div>
+						
+						<!-- Weihnachtsgeschenke -->
+						<div class="filterDiv wa">
+                            <a href="" style="text-decoration: none;color:#272521;">
+                                <div class="subElem"><img src="https://raw.githubusercontent.com/PokerBauer/PokerBauer.github.io/main/Webshop/Images/Geschenkset/Schokoadventskalender_in_Holzschachtel.PNG" alt="Schokoadventskalender_in_Holzschachtel" width="200" height="200"></div>
+                                <div class="subElem name">
+                                    <p style="text-align:center;font-family: avenir-lt-w01_35-light1475496, sans-serif;">Schokoadventskalender in Holzschachtel</p>
+                                </div>
+                                <div class="subElem">
+                                    <p style="text-align:center;font-family: avenir-lt-w01_35-light1475496, sans-serif;">€</p>
+                                </div>
+                            </a>
+                        </div>
+                        
+						<div class="filterDiv wa">
+                            <a href="" style="text-decoration: none;color:#272521;">
+                                <div class="subElem"><img src="https://raw.githubusercontent.com/PokerBauer/PokerBauer.github.io/main/Webshop/Images/Geschenkset/Schokolade_und_Wein_Geschenkkorb.PNG" alt="Schokolade_und_Wein_Geschenkkorb" width="200" height="200"></div>
+                                <div class="subElem name">
+                                    <p style="text-align:center;font-family: avenir-lt-w01_35-light1475496, sans-serif;">Schokolade und Wein Geschenkkorb</p>
+                                </div>
+                                <div class="subElem">
+                                    <p style="text-align:center;font-family: avenir-lt-w01_35-light1475496, sans-serif;">€</p>
+                                </div>
+                            </a>
+                        </div>
+						
+						<div class="filterDiv wa">
+                            <a href="" style="text-decoration: none;color:#272521;">
+                                <div class="subElem"><img src="https://raw.githubusercontent.com/PokerBauer/PokerBauer.github.io/main/Webshop/Images/Geschenkset/Schokotorte.PNG" alt="Schokotorte" width="200" height="200"></div>
+                                <div class="subElem name">
+                                    <p style="text-align:center;font-family: avenir-lt-w01_35-light1475496, sans-serif;">Schokotorte</p>
+                                </div>
+                                <div class="subElem">
+                                    <p style="text-align:center;font-family: avenir-lt-w01_35-light1475496, sans-serif;">€</p>
+                                </div>
+                            </a>
+                        </div>
+						
+						<div class="filterDiv wa">
+                            <a href="" style="text-decoration: none;color:#272521;">
+                                <div class="subElem"><img src="https://raw.githubusercontent.com/PokerBauer/PokerBauer.github.io/main/Webshop/Images/Geschenkset/Schokowerkzeuge.PNG" alt="Schokowerkzeuge" width="200" height="200"></div>
+                                <div class="subElem name">
+                                    <p style="text-align:center;font-family: avenir-lt-w01_35-light1475496, sans-serif;">Schokowerkzeuge</p>
+                                </div>
+                                <div class="subElem">
+                                    <p style="text-align:center;font-family: avenir-lt-w01_35-light1475496, sans-serif;">€</p>
+                                </div>
+                            </a>
+                        </div>
+						
+						<div class="filterDiv wa">
+                            <a href="" style="text-decoration: none;color:#272521;">
+                                <div class="subElem"><img src="https://raw.githubusercontent.com/PokerBauer/PokerBauer.github.io/main/Webshop/Images/Geschenkset/Trueffel_Geschenkbox.PNG" alt="Trueffel_Geschenkbox" width="200" height="200"></div>
+                                <div class="subElem name">
+                                    <p style="text-align:center;font-family: avenir-lt-w01_35-light1475496, sans-serif;">Trüffel Geschenkbox</p>
+                                </div>
+                                <div class="subElem">
+                                    <p style="text-align:center;font-family: avenir-lt-w01_35-light1475496, sans-serif;">€</p>
+                                </div>
+                            </a>
+                        </div>
+						
+					</div>
+                </td>
+
+
+            </tr>
+        </table>
+    </div>
+    
+    <script>
+        filterSelection("all")
+
+        function filterSelection(c) {
+            var x, i;
+            x = document.getElementsByClassName("filterDiv");
+            if (c == "all") c = "";
+            for (i = 0; i < x.length; i++) {
+                w3RemoveClass(x[i], "show");
+                if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+            }
+        }
+
+        function w3AddClass(element, name) {
+            var i, arr1, arr2;
+            arr1 = element.className.split(" ");
+            arr2 = name.split(" ");
+            for (i = 0; i < arr2.length; i++) {
+                if (arr1.indexOf(arr2[i]) == -1) {
+                    element.className += " " + arr2[i];
+                }
+            }
+        }
+
+        function w3RemoveClass(element, name) {
+            var i, arr1, arr2;
+            arr1 = element.className.split(" ");
+            arr2 = name.split(" ");
+            for (i = 0; i < arr2.length; i++) {
+                while (arr1.indexOf(arr2[i]) > -1) {
+                    arr1.splice(arr1.indexOf(arr2[i]), 1);
+                }
+            }
+            element.className = arr1.join(" ");
+        }
+
+        // Add active class to the current button (highlight it)
+        var btnContainer = document.getElementById("myBtnContainer");
+        var btns = btnContainer.getElementsByClassName("filter_btn");
+        for (var i = 0; i < btns.length; i++) {
+            btns[i].addEventListener("click", function() {
+                var current = document.getElementsByClassName("active");
+                current[0].className = current[0].className.replace(" active", "");
+                this.className += " active";
+            });
+        }
+    </script>
 </body>
 
 <!--FOOTER-->
