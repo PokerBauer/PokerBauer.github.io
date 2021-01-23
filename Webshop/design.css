@@ -208,7 +208,7 @@ body,
 /* Link */
 .aLink {
         text-decoration: none;
-	color:#272521;
+	color:#f2f2f2;
 }
         
 /* Filter Button */
@@ -237,12 +237,14 @@ body,
 
 /* Products Div Box */
 .subElem {
+	color:#f2f2f2;
         float: bottom;
         max-width: 200px;
 	min-width: 200px;
 }
 
 .subElemP {
+	color:#f2f2f2;
         text-align:center;
 	font-family: avenir-lt-w01_35-light1475496, sans-serif;
 }    
