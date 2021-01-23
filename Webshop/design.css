@@ -185,6 +185,18 @@ body,
             color: #c78b7b;
             font-size: 15px;
         }
+
+        .table columnleft {
+		    background-color: #fffaec; 
+			width: 200px; 
+			vertical-align: top; 
+			padding-left: 25px;"
+		}
+		
+        .table columnright {
+		    width: 800px; 
+			padding: 1px 100px;"
+		}
         
         /* Filter Button */
         .filter_btn {
