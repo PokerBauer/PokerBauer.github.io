@@ -232,6 +232,11 @@ body,
             max-width: 200px;
 			min-width: 200px;
         }
+
+        .subElemP {
+            text-align:center;
+	    font-family: avenir-lt-w01_35-light1475496, sans-serif;
+		}
         
         .name {
             height: 50px;
