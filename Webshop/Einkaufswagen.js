@@ -269,21 +269,21 @@ function AnzahlItems(Produkte) {
     var anzahlProdukte = localStorage.getItem("AnzahlItemsWarenkorb");
     anzahlProdukte = parseInt(anzahlProdukte);
 
-    var testing101 = document.querySelector(".anzahl");
+    var inputWithNumberOfItems = document.querySelector(".anzahl");
 
-    var numberTesting = testing101.value;
-    numberTesting = parseInt(numberTesting);
+    var valueOfInput = inputWithNumberOfItems.value;
+    valueOfInput = parseInt(valueOfInput);
 
-    console.log(numberTesting);
+    console.log(valueOfInput);
 
 
 
     //localStorage.setItem("AnzahlItemsWarenkorb", math);
 
     if (anzahlProdukte) {
-        localStorage.setItem("AnzahlItemsWarenkorb", anzahlProdukte + numberTesting);
+        localStorage.setItem("AnzahlItemsWarenkorb", anzahlProdukte + valueOfInput);
         } else {
-        localStorage.setItem("AnzahlItemsWarenkorb", 1);
+        localStorage.setItem("AnzahlItemsWarenkorb", valueOfInput);
     }
 
     setItems(Produkte);
@@ -294,9 +294,9 @@ function setItems(Produkte) {
     var ItemsWK = localStorage.getItem("ProdukteImWK");
     ItemsWK = JSON.parse(ItemsWK);
 
-    var testing101 = document.querySelector(".anzahl");
-    var numberTesting = testing101.value;
-    numberTesting = parseInt(numberTesting);
+    var inputWithNumberOfItems = document.querySelector(".anzahl");
+    var valueOfInput = inputWithNumberOfItems.value;
+    valueOfInput = parseInt(valueOfInput);
 
     if(ItemsWK != null) { //wenn bereits vorhanden ist
         if(ItemsWK[Produkte.bild] == undefined) {
@@ -305,9 +305,9 @@ function setItems(Produkte) {
                 [Produkte.bild] : Produkte
             }
         }
-        ItemsWK[Produkte.bild].imWarenkorb = ItemsWK[Produkte.bild].imWarenkorb + numberTesting;
+        ItemsWK[Produkte.bild].imWarenkorb = ItemsWK[Produkte.bild].imWarenkorb + valueOfInput;
     } else {
-        Produkte.imWarenkorb = numberTesting; 
+        Produkte.imWarenkorb = valueOfInput; 
         var ItemsWK = {
             [Produkte.bild] : Produkte
         } //erstellen der LS variable und setzung des attributes (?) .imWarenkorb auf 1
@@ -318,13 +318,19 @@ function setItems(Produkte) {
 function GesamtPreis(Produkt) {
     let TeilPreis = localStorage.getItem("GesamtPreis"); 
 
+    var inputWithNumberOfItems = document.querySelector(".anzahl");
+    var valueOfInput = inputWithNumberOfItems.value;
+    valueOfInput = parseInt(valueOfInput);
+
     if(TeilPreis != null) {
         TeilPreis = parseInt(TeilPreis);
-        localStorage.setItem("GesamtPreis", TeilPreis+Produkt.preis); //erhöht den Preis um den neuen Produkt preis
+        localStorage.setItem("GesamtPreis", TeilPreis+Produkt.preis*valueOfInput); //erhöht den Preis um den neuen Produkt preis
     } else {
-        localStorage.setItem("GesamtPreis", Produkt.preis); //setzt beim erst durchlauf den preis
+        localStorage.setItem("GesamtPreis", Produkt.preis*valueOfInput); //setzt beim erst durchlauf den preis
     }
 } //berechnet den Gesamtpreis des Einkaufes
+
+
 
 function AusgabeEinkaufswagen(){
     let ItemsWK = localStorage.getItem("ProdukteImWK");
@@ -337,7 +343,8 @@ function AusgabeEinkaufswagen(){
             InhaltWarenkorb.innerHTML += `
             <div class="PrdukteWK"> 
             <button type="Entfernen"> Entfernen </button>
-                <img src ="Images/${Item.bild}.jpg"></img>
+                <img src ="../../Images/Geschenkset/${Item.bild}.jpg"></img>
+                <img src ="EWIF/Webshop/Images/Geschenkset/${Item.bild}.jpg"></img>
                 <span>${Item.name}</span>
             </div>
             <div class="Preis">${Item.preis},00 Euro</div>
@@ -353,6 +360,8 @@ function AusgabeEinkaufswagen(){
             //span als extra div ?
             //erstellt html-code der den Warenkorb darstellt
         });
+
+        // <img src="../../Images/Geschenkset/Schokoadventskalender_in_Holzschachtel.png"
         let TeilPreis = localStorage.getItem("GesamtPreis");
         InhaltWarenkorb.innerHTML += `
         <div class="Gesamtpreis">
@@ -385,5 +394,7 @@ function KomplettEntfernen(Produkt) {
     ItemsWK[Produkt].imWarenkorb = 0;
 } 
 
+/*
 let btnMehr = document.querySelector(".einsMehr");
 console.log(btnMehr); 
+*/
