@@ -213,6 +213,7 @@ var Produkte = [
 
 var TestObProductPage = document.querySelectorAll(".produktbild");
 
+/*
 if(TestObProductPage) {
     var x = document.querySelector("title");
     var productTEST = x.textContent;
@@ -224,18 +225,42 @@ if(TestObProductPage) {
         }
     }
 
-    //var button = document.querySelectorAll("button");
-    var button = document.getElementById("button");
+    /*
+
+    var button = document.querySelectorAll(".Warenkorb");
+    //var button = document.getElementById("button");
 
     console.log(button);
 
     //nur der button
-    button.addEventListener("click", event => {
-        AnzahlItems(Produkte[reminder]);
-        GesamtPreis(Produkte[reminder]);
-        AusgabeEinkaufswagen();
-    });
+
+    for(var p = 0; p <= 1; p++) {
+        button[p].addEventListener("click", event => {
+            AnzahlItems(Produkte[reminder]);
+            GesamtPreis(Produkte[reminder]);
+            AusgabeEinkaufswagen();
+        });
+    }
+    
 }
+*/
+
+function clickTest(){
+    var x = document.querySelector("title");
+    var productTEST = x.textContent;
+
+    for(var i = 0; i < Produkte.length; i++) {
+        if(productTEST == Produkte[i].name) {
+            var reminder = i;
+            //console.log(reminder);
+        }
+    }
+
+    AnzahlItems(Produkte[reminder]);
+    GesamtPreis(Produkte[reminder]);
+    AusgabeEinkaufswagen();
+}
+
 
 function AnzahlItems(Produkte) {
 
