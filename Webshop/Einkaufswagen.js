@@ -219,29 +219,39 @@ if(TestObProductPage) {
     var x = document.querySelector("title");
     var productTEST = x.textContent;
 
-    for(var i = 0; i < Produkte.length-1; i++) {
+    for(var i = 0; i < Produkte.length; i++) {
         if(productTEST == Produkte[i].name) {
             var reminder = i;
+            console.log(reminder);
         }
     }
-    /*
-    for (let i = 0; i < items.length; i++) {
-            items[i].addEventListener("click",() => {
-            AnzahlItems(Produkte[i]);
-            GesamtPreis(Produkte[i]);
-            AusgabeEinkaufswagen();
-        })
-    } 
-    */
 }
 
+window.addEventListener("click", () => {
+    AnzahlItems(Produkte[reminder]);
+    GesamtPreis(Produkte[reminder]);
+    AusgabeEinkaufswagen();
+
+});
+
 function AnzahlItems(Produkte) {
+    console.log("FUCK THIS");
     var anzahlProdukte = localStorage.getItem("AnzahlItemsWarenkorb");
     anzahlProdukte = parseInt(anzahlProdukte);
+
+    var testing101 = document.querySelector(".anzahl");
+
+    var numberTesting = testing101.value;
+
+    var math = anzahlProdukte + numberTesting;
+    console.log(math);
+    //Ü**********
+
+
     if (anzahlProdukte) {
-        localStorage.setItem("AnzahlItemsWarenkorb", anzahlProdukte+1);
+        localStorage.setItem("AnzahlItemsWarenkorb", anzahlProdukte + numberTesting);
         } else {
-        localStorage.setItem("AnzahlItemsWarenkorb", 1);
+        localStorage.setItem("AnzahlItemsWarenkorb", numberTesting);
     }
 
     setItems(Produkte);
