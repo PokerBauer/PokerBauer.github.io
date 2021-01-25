@@ -43,6 +43,19 @@ h2 {
 	padding-top: 5px;
 	padding-bottom: 5px;
 }
+
+h6 {
+	font-size: 20px;
+	color: #5f4019;
+	text-shadow: 5px 1px 10px #e88b45;
+	font-family: Helvetica, sans-serif;
+	min-width: 200px;
+	font-style: oblique;
+	letter-spacing: 2px;
+	margin-bottom: 3px;
+	margin-top: 20px;
+}
+
 body {
 	font-family: Helvetica, sans-serif;
 	color: #5f4019;
@@ -73,15 +86,14 @@ body,
 .nav a {
   padding-top: 10px;
   padding-bottom: 10px;
-  padding-left: 40px;
-  padding-right: 40px;
+  padding-left: 80px;
+  padding-right: 80px;
   font-size: 35px;
   width: 33%;
   border-right: 2px solid rgba(0,0,0,0.2);
 }
 .nav a:last-child {
 	border-right: none;
-	padding-left: 5px;
 }
 
 
@@ -189,15 +201,16 @@ body,
 }
         
 .columnleft {
-        background: #fffaec;
+        background: transparent;
 	height: 100%;
 	min-width: 205px;
 	vertical-align: top; 
+	
 }
 		
 .columnright {
 	width: 895px; 
-	padding: 1px 85px;
+	padding: 1px 200px;
 }
 
 /* Control Buttons Div Box */		
@@ -214,12 +227,10 @@ body,
 /* Filter Button */
         
 .filter_btn {
-        background-color: #fffaec;
-        color: black;
-        padding: 15px 1px;
+        background-color: transparent;
+        color: white;
         font-family: avenir-lt-w01_35-light1475496, sans-serif;
         font-size: 15px;
-        line-height: 1.4em;
         border: none;
         outline: none;
 }
@@ -232,14 +243,14 @@ body,
 .filterDiv {
         float: left;
         display: none;
-        padding: 7.5px
+        padding: 7.5px;
 }
 
 /* Products Div Box */
 .subElem {
 	color:#f2f2f2;
-        float: bottom;
-        max-width: 200px;
+    float: bottom;
+    max-width: 200px;
 	min-width: 200px;
 }
 
@@ -251,6 +262,7 @@ body,
 
 .container {
         overflow: hidden;
+		padding-left: 30px;
 }
 
 .name {
@@ -259,6 +271,11 @@ body,
         
 .show {
         display: block;
+}
+button {
+	width: 100%;
+	text-align: left;
+	margin-top: 0px;
 }
         
 
