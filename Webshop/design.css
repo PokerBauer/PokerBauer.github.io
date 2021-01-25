@@ -18,6 +18,7 @@ a {
 .header img {
 	height: 80%;
 	width: 10%;
+	padding-top: 10px;
 	margin-right: 30px;
 	float: left;
 }
@@ -189,10 +190,11 @@ body,
 }
         
 .columnleft {
-        background: #fffaec;
+        background: transparent;
 	height: 100%;
 	min-width: 205px;
 	vertical-align: top; 
+
 }
 		
 .columnright {
@@ -214,7 +216,7 @@ body,
 /* Filter Button */
         
 .filter_btn {
-        background-color: #fffaec;
+        background-color: transparent;
         color: black;
         padding: 15px 1px;
         font-family: avenir-lt-w01_35-light1475496, sans-serif;
@@ -229,24 +231,33 @@ body,
 }
         
         
-.filterDiv {
+.filterDiv{
         float: left;
         display: none;
-        padding: 7.5px
+        padding-left: 20px;
+		padding-bottom: 20px;
+		
 }
+
 
 /* Products Div Box */
 .subElem {
 	color:#f2f2f2;
-        float: bottom;
-        max-width: 200px;
+    float: bottom;
+    max-width: 200px;
 	min-width: 200px;
+	border:  2px solid rgba(0,0,0,0.8);
+	margin-left: 50%;
+	background-image:linear-gradient(#4f2c11, #ffeeb8);
+	
 }
-
 .subElemP {
 	color:#f2f2f2;
-        text-align:center;
+    text-align:center;
 	font-family: avenir-lt-w01_35-light1475496, sans-serif;
+	margin-left: 2%;
+	margin-bottom: 5%;
+	font-size: 80%;
 }    
 
 .container {
