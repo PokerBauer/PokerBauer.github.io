@@ -41,11 +41,40 @@ h2 {
 	padding-top: 5px;
 	padding-bottom: 5px;
 }
+
+h3 {
+	font-size: 20px;
+	color: #5f4019;
+	text-shadow: 5px 1px 10px #e88b45;
+	font-family: Helvetica, sans-serif;
+	min-width: 200px;
+	font-style: oblique;
+	letter-spacing: 8px;
+	margin-top: 0px;
+	padding-top: 15px;
+	padding-bottom: 0px;
+	padding-left: 8%;
+	margin-bottom: 5px;
+}
+h4 {
+	font-size: 20px;
+	color: #5f4019;
+	text-shadow: 5px 1px 10px #e88b45;
+	font-family: Helvetica, sans-serif;
+	min-width: 200px;
+	font-style: oblique;
+	letter-spacing: 5px;
+	margin-top: 0px;
+	padding-top: 15px;
+	padding-bottom: 0px;
+	padding-left: 8%;
+	margin-bottom: 5px;
+}
+
 body {
 	font-family: Helvetica, sans-serif;
 	color: #5f4019;
-	padding: 80px 0 48px;
-	margin-top: 0px;
+	padding-top: 80px;
 	background-image: radial-gradient(#4f2c11, #ffeeb8);
 	overflow-x : hidden;
 	overflow-y : scroll;
@@ -175,64 +204,67 @@ body,
 }
 
 /* Table */
-        
-.table {
-         table-layout: fixed;
-}
-        
-.table b {
-        font-family: avenir-lt-w01_35-light1475496, sans-serif;
-        color: #c78b7b;
-        font-size: 15px;
-}
-        
+			
+    
 .columnleft {
-        background: transparent;
+    background: transparent;
 	height: 100%;
-	min-width: 205px;
-	vertical-align: top; 
+	width: 20%;
+	vertical-align: top;
+}	
+
+
+button {
+	width: 100%;
 
 }
-		
 .columnright {
-	width: 895px; 
-	padding: 1px 85px;
+	width: 80%; 
+	padding: 0px 0px;
+	padding-right: 10%;
 }
 
 /* Control Buttons Div Box */		
 .btnContainer{
         padding-left: 15px;
+		background: transparent;
+		position: fixed;
+		padding-top: 2%;
 }
 
 /* Link */
 .aLink {
-        text-decoration: none;
+    text-decoration: none;
 	color:#f2f2f2;
 }
-        
+      
 /* Filter Button */
         
-.filter_btn {
+.filter_btn { 
         background-color: transparent;
-        color: black;
-        padding: 15px 1px;
+        color: white;
         font-family: avenir-lt-w01_35-light1475496, sans-serif;
         font-size: 15px;
-        line-height: 1.4em;
+        line-height: 0px;
         border: none;
         outline: none;
+		text-align: left;
+		padding-left: 10%;
+		padding-bottom: 4%;
+		padding-top: 0px;
+		margin-top: 0px;
+		
 }
         
 .filter_btn:hover {
         text-decoration: underline;
 }
-        
+  
         
 .filterDiv{
-        float: left;
-        display: none;
-        padding-left: 20px;
-		padding-bottom: 20px;
+        display: inline-block;
+        width: 22%;
+		background: white;
 		
 }
 
@@ -241,44 +273,33 @@ body,
 .subElem {
 	color:#f2f2f2;
     float: bottom;
-    max-width: 200px;
-	min-width: 200px;
+    width: 100%;
 	border:  2px solid rgba(0,0,0,0.8);
-	margin-left: 50%;
 	background-image:linear-gradient(#4f2c11, #ffeeb8);
 	
 }
-.subElemP {
+.subElem p {
 	color:#f2f2f2;
     text-align:center;
 	font-family: avenir-lt-w01_35-light1475496, sans-serif;
 	margin-left: 2%;
 	margin-bottom: 5%;
 	font-size: 80%;
+	background: transparent;
 }    
 
 .container {
         overflow: hidden;
+		background: transparent;
+		padding-top: 2%;
 }
 
 .name {
         height: 50px;
+		background: transparent;
 }
         
 .show {
-        display: block;
-}
-        
+        display: inline-block;
+} 
 
-        
-/* Break */
-        
-.brmedium {
-        display: block;
-        margin-bottom: 0.5em;
-}
-        
-.brlarge {
-        display: block;
-        margin-bottom: 8em;
-}
