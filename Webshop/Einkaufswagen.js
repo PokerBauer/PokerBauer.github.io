@@ -302,9 +302,10 @@ function setItems(Produkte) {
     valueOfInput = parseInt(valueOfInput);
 
     if(ItemsWK != null) { //wenn bereits vorhanden ist
+
         if(ItemsWK[Produkte.bild] == undefined) {
             ItemsWK = {
-                ItemsWK,
+                ...ItemsWK,
                 [Produkte.bild] : Produkte
             }
         }
@@ -315,17 +316,20 @@ function setItems(Produkte) {
             [Produkte.bild] : Produkte
         } //erstellen der LS variable und setzung des attributes (?) .imWarenkorb auf die Eingabe im Input feld
     }
+    console.log(ItemsWK);
     localStorage.setItem("ProdukteImWK", JSON.stringify(ItemsWK))
+    console.log(JSON.stringify(ItemsWK));
 }//erstellt variable im LocalStorage und erhöht diese um die Eingabe im Input
 
 function GesamtPreis(Produkt, Warenkorb) {
     let TeilPreis = localStorage.getItem("GesamtPreis"); 
 
     var inputWithNumberOfItems = document.querySelector(".anzahl");
-    var valueOfInput = inputWithNumberOfItems.value;
-    valueOfInput = parseInt(valueOfInput);
+
 
     if(TeilPreis != null && Warenkorb == "false") {
+        var valueOfInput = inputWithNumberOfItems.value;
+        valueOfInput = parseInt(valueOfInput);
         TeilPreis = parseInt(TeilPreis);
         localStorage.setItem("GesamtPreis", TeilPreis+Produkt.preis*valueOfInput); //erhöht den Preis um den neuen Produkt preis
     } else if (TeilPreis != null && Warenkorb == "plusEins") {
@@ -335,6 +339,8 @@ function GesamtPreis(Produkt, Warenkorb) {
         TeilPreis = parseInt(TeilPreis);
         localStorage.setItem("GesamtPreis", TeilPreis-Produkt.preis); //erhöht den Preis um den neuen Produkt preis 
     } else{
+        var valueOfInput = inputWithNumberOfItems.value;
+        valueOfInput = parseInt(valueOfInput);
         localStorage.setItem("GesamtPreis", Produkt.preis*valueOfInput); //setzt beim erst durchlauf den preis
     }
 } //berechnet den Gesamtpreis des Einkaufes
@@ -342,57 +348,57 @@ function GesamtPreis(Produkt, Warenkorb) {
 
 
 function AusgabeEinkaufswagen(){
+    //imWKcleaner();
     let ItemsWK = localStorage.getItem("ProdukteImWK");
+    //console.log(ItemsWK);
     ItemsWK = JSON.parse(ItemsWK); //erstellt nutzbare variable mit den aktuellen Warenkorb inhalt
 
     let InhaltWarenkorb = document.querySelector(".InhaltWarenkorb");
-    InhaltWarenkorb.innerHTML = "";
 
-    if(ItemsWK && InhaltWarenkorb)  { //checkt ob es die Warenkorb seite ist
-                    Object.values(ItemsWK).map(Item => {
-                    InhaltWarenkorb.innerHTML += `
-                    <div class="PrdukteWK"> 
-                    <button type="Entfernen" onclick="KomplettEntfernen(${Item.id})"> Produkt aus dem Warenkorb entfernen </button>
-                    <img src ="Images/Geschenkset/${Item.bild}.PNG"></img>
-                    ${Item.name}
-                    </div>
-                    <div class="Preis">${Item.preis},00 Euro</div>
-                    <div class="Anzahl">
-                    <button type="einsWeniger" onclick="einsWeniger(${Item.id})"> -1 </button>
-                    ${Item.imWarenkorb}
-                    <button type="einsMehr" onclick="einsMehr(${Item.id})"> +1 </button>
-                    </div>
-                    <div class="Preise"> Teilpreis:${Item.imWarenkorb*Item.preis},00 Euro</div>
-                    `
-            });//erstellt html-code der den Warenkorb darstellt
-        let TeilPreis = localStorage.getItem("GesamtPreis");
-        InhaltWarenkorb.innerHTML += `
-        <div class="Gesamtpreis">
-        <h4 class="GesamtpreisTitel"> Gesamtpreis:${TeilPreis},00 Euro € </h4>
-        </div>
-        <button type="WarenkorbLeeren" onclick="WarenkorbLeer()"> Warenkorb komplett leeren</button>
-        `
-        //erstellt html-code der den Gesamtpreis darstellt
-    } else {
-        InhaltWarenkorb.innerHTML += `<h3>Ihr Warenkorb ist leer!</h3>`;
-    } //Wird nur ausgegeben wenn der Warenkorb leer ist
+    //console.log(ItemsWK);
+    var TestObWarenkorb = document.querySelector(".InhaltWarenkorb");
+    if(TestObWarenkorb) { //checkt ob es die Warenkorb seite ist
+        if(ItemsWK && InhaltWarenkorb)  { //checkt ob es die Warenkorb seite ist
+            //for(var counter = 0; counter < ItemsWK.length; counter++) {
+                InhaltWarenkorb.innerHTML = "";
+                        Object.values(ItemsWK).map(Item => {
+                        InhaltWarenkorb.innerHTML += `
+                        <div class="PrdukteWK"> 
+                        <button type="Entfernen" onclick="ItemEntfernen(${Item.id})"> Produkt aus dem Warenkorb entfernen </button>
+                        <img src ="Images/Geschenkset/${Item.bild}.PNG"></img>
+                        ${Item.name}
+                        </div>
+                        <div class="Preis">${Item.preis},00 Euro</div>
+                        <div class="Anzahl">
+                        <button type="einsWeniger" onclick="einsWeniger(${Item.id})"> -1 </button>
+                        ${Item.imWarenkorb}
+                        <button type="einsMehr" onclick="einsMehr(${Item.id})"> +1 </button>
+                        </div>
+                        <div class="Preise"> Teilpreis:${Item.imWarenkorb*Item.preis},00 Euro</div>
+                        `
+                });//erstellt html-code der den Warenkorb darstellt
+            //}
+            let TeilPreis = localStorage.getItem("GesamtPreis");
+            InhaltWarenkorb.innerHTML += `
+            <div class="Gesamtpreis">
+            <h4 class="GesamtpreisTitel"> Gesamtpreis:${TeilPreis},00 Euro € </h4>
+            </div>
+            <button type="WarenkorbLeeren" onclick="WarenkorbLeer()"> Warenkorb komplett leeren</button>
+            `
+            //erstellt html-code der den Gesamtpreis darstellt
+        } else {
+            InhaltWarenkorb.innerHTML = "";
+            InhaltWarenkorb.innerHTML += `<h3>Ihr Warenkorb ist leer!</h3>`;
+        } //Wird nur ausgegeben wenn der Warenkorb leer ist
+    }
 }
 
 var TestObWarenkorb = document.querySelector(".InhaltWarenkorb");
-if(TestObWarenkorb) { //checkt ob es die Warenkorb seite ist
-    AusgabeEinkaufswagen(); 
-} //ausgabe des warnkorbs beim laden der Warenkorbseite
+if (TestObWarenkorb) {
+    AusgabeEinkaufswagen();
+}
 
-/*
-TODO:
-58: anpassen an richtige Preise + richtige Bildnamen und ß schreibbar machen + 58 die tags auf die neuen 15 anpassen
-145: €, ß in html ordentlich anzeigen lassen
-160+: Die Buttons zum entfernen, +1 und -1 müssen noch entwickelt werden
--> Funktion in Funktion? //rausfinden wie zugriff auf Button innerhalb einer Textausgabe funktionier -> notfalls umschreiben!
-*/
-//Experimente für die Buttons:
-
-function KomplettEntfernen(ProductID) {
+function ItemEntfernen(ProductID) {
     let ItemsWK = localStorage.getItem("ProdukteImWK");
     ItemsWK = JSON.parse(ItemsWK); //erstellt nutzbare variable mit den aktuellen Warenkorb inhalt
 
@@ -404,7 +410,6 @@ function einsMehr(ProductID)  {
     let ItemsWK = localStorage.getItem("ProdukteImWK");
     ItemsWK = JSON.parse(ItemsWK); //erstellt nutzbare variable mit den aktuellen Warenkorb inhalt
 
-    //console.log(ItemsWK["Schokoadventskalender_in_Holzschachtel"].imWarenkorb);
 
     for (var i = 0; i < Produkte.length; i++) {
         if(Produkte[i].id == ProductID) {
@@ -453,3 +458,14 @@ function WarenkorbLeer() {
     localStorage.clear();
     AusgabeEinkaufswagen();
 }
+
+
+function imWKcleaner() {
+    let ItemsWK = localStorage.getItem("ProdukteImWK");
+    ItemsWK = JSON.parse(ItemsWK);
+
+}
+
+//TODO: Button entwicklen um nur ein Item aus dem WK zu löschen
+//TODO: Items bei dem .inWarenkorb <= 0 ist aus der NodeList killen
+// ? jeden eintrag als Array speichern -> att checken -> löschen -> neu als Nodelist in LS speicher (???)
