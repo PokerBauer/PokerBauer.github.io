@@ -1,5 +1,3 @@
-let items = document.querySelectorAll(".Warenkorb");
-
 var Produkte = [
     { //Geschenkset
         name: "Schokoadventskalender_in_Holzschachtel",
@@ -14,7 +12,7 @@ var Produkte = [
         imWarenkorb: 0
     },
     {
-        name: "Schokotorte", //ß wird nicht richtig ausgegeben??
+        name: "Schokotorte",
         bild: "Schokotorte",
         preis: 3,
         imWarenkorb: 0
@@ -213,7 +211,7 @@ var Produkte = [
     } //Produkte unter diesem Muster hinzufügen
 ]//bild soll der Bildname sein -> zum nuten in AusgabeEinkaufswagen(),   TODO: anpassen an richtige Preise
 
-var TestObProductPage = document.querySelectorAll(".produktbild"); //Erkennt ProductPage nicht
+var TestObProductPage = document.querySelectorAll(".produktbild");
 
 if(TestObProductPage) {
     var x = document.querySelector("title");
@@ -225,33 +223,42 @@ if(TestObProductPage) {
             console.log(reminder);
         }
     }
+
+    //var button = document.querySelectorAll("button");
+    var button = document.getElementById("button");
+
+    console.log(button);
+
+    //nur der button
+    button.addEventListener("click", event => {
+        AnzahlItems(Produkte[reminder]);
+        GesamtPreis(Produkte[reminder]);
+        AusgabeEinkaufswagen();
+    });
 }
 
-window.addEventListener("click", () => {
-    AnzahlItems(Produkte[reminder]);
-    GesamtPreis(Produkte[reminder]);
-    AusgabeEinkaufswagen();
-
-});
-
 function AnzahlItems(Produkte) {
-    console.log("FUCK THIS");
+
+    console.log("InAnzahlItems");
+
     var anzahlProdukte = localStorage.getItem("AnzahlItemsWarenkorb");
     anzahlProdukte = parseInt(anzahlProdukte);
 
     var testing101 = document.querySelector(".anzahl");
 
     var numberTesting = testing101.value;
+    numberTesting = parseInt(numberTesting);
 
-    var math = anzahlProdukte + numberTesting;
-    console.log(math);
-    //Ü**********
+    console.log(numberTesting);
 
+
+
+    //localStorage.setItem("AnzahlItemsWarenkorb", math);
 
     if (anzahlProdukte) {
         localStorage.setItem("AnzahlItemsWarenkorb", anzahlProdukte + numberTesting);
         } else {
-        localStorage.setItem("AnzahlItemsWarenkorb", numberTesting);
+        localStorage.setItem("AnzahlItemsWarenkorb", 1);
     }
 
     setItems(Produkte);
