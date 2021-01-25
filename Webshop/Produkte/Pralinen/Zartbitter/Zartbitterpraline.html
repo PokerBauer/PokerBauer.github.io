@@ -4,6 +4,7 @@
 <head>
     <title>Zartbitterpraline</title>
     <link href="../../../design.css" rel="stylesheet" type="text/css">
+    <script src="../../../Einkaufswagen.js"></script>
 </head>
 <div class="header"> <img src="../../../Images/warenkorb1.png" alt="logo">
     <h1>Chocolate Land</h1>
@@ -18,22 +19,33 @@
     <!-- BODY -->
     <div class="body">
         <div class="produkt">
+            <div class="produktname">
+                <h2>
+                    Zartbitterpraline
+                </h2>
+            </div>
             <div class="produktbild">
-                <img src="../../../Images/Pralinen/Zartbitter/Zartbitterpraline.png" alt="Zartbitterpraline">
+                <img src="../../../Images/Geschenkset/Zartbitterpraline.png" alt="Zartbitterpraline">
             </div>
             <div class="produktinfo">
-                <h2>
-                    Informationen: <h3></h3>
-                </h2>
-                <h2>
-                    Preis:<h4></h4>
-                </h2>
-                    <h5>Anzahl</h5>    
-                    <input class="anzahl" type="number" max="100" min="1">
-                <div class="button">
-                    
-                    <button class="Warenkorb"><h6>In den Warenkorb</h6></button>
-                </div>    
+                <div class="beschreibung">
+                    <h2>
+                        Informationen: 
+                        <h3>hier stehen Infos</h3>
+                    </h2>  
+                </div>
+                <div class="preis">
+                    <h2>
+                        Preis:<h4>0.00€</h4>
+                    </h2>
+                        <h5>Anzahl</h5>    
+                        <input class="anzahl" value="0" type="number" max="100" min="1">
+                    <div class="button">
+                        <button class="Warenkorb" onclick="zumWarenkorb()">
+                            <h6>In den Warenkorb</h6>
+                        </button>
+                    </div>  
+                </div>
             </div>
         </div>
     </div>
