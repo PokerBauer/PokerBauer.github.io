@@ -344,7 +344,7 @@ function AusgabeEinkaufswagen(){
             <div class="PrdukteWK"> 
             <button type="Entfernen"> Entfernen </button>
                 <img src ="Images/Geschenkset/${Item.bild}.PNG"></img>
-                <span>${Item.name}</span>
+                ${Item.name}
             </div>
             <div class="Preis">${Item.preis},00 Euro</div>
             <div class="Anzahl">
