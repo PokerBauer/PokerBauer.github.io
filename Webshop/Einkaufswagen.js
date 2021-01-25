@@ -213,13 +213,17 @@ var Produkte = [
     } //Produkte unter diesem Muster hinzufügen
 ]//bild soll der Bildname sein -> zum nuten in AusgabeEinkaufswagen(),   TODO: anpassen an richtige Preise
 
-var TestObProductPage = document.querySelector(".produkt"); //Erkennt ProductPage nicht
-console.log(TestObProductPage);
-if(TestObProductPage) {
+var TestObProductPage = document.querySelectorAll(".produktbild"); //Erkennt ProductPage nicht
 
-    console.log("TESTinIf");
-    var altImg = link.getElementsByTagName('img')[0].alt;
-    console.log(altImg);
+if(TestObProductPage) {
+    var x = document.querySelector("title");
+    var productTEST = x.textContent;
+
+    for(var i = 0; i < Produkte.length-1; i++) {
+        if(productTEST == Produkte[i].name) {
+            var reminder = i;
+        }
+    }
     /*
     for (let i = 0; i < items.length; i++) {
             items[i].addEventListener("click",() => {
