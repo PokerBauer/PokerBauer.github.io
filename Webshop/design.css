@@ -262,11 +262,9 @@ button {
   
         
 .filterDiv{
-        float: left;
-        display: none;
-        padding-left: 20px;
-		padding-bottom: 20px;
-		background: transparent;
+        display: inline-block;
+        width: 22%;
+		background: white;
 		
 }
 
@@ -275,14 +273,12 @@ button {
 .subElem {
 	color:#f2f2f2;
     float: bottom;
-    max-width: 200px;
-	min-width: 200px;
+    width: 100%;
 	border:  2px solid rgba(0,0,0,0.8);
-	margin-left: 50%;
 	background-image:linear-gradient(#4f2c11, #ffeeb8);
 	
 }
-.subElemP {
+.subElem p {
 	color:#f2f2f2;
     text-align:center;
 	font-family: avenir-lt-w01_35-light1475496, sans-serif;
@@ -305,7 +301,5 @@ button {
         
 .show {
         display: inline-block;
-}
-        
-        
+} 
 
