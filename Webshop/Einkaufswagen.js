@@ -1,12 +1,12 @@
 var Produkte = [
     { //Geschenkset
-        name: "Schokoadventskalender_in_Holzschachtel",
+        name: "Schokoadventskalender in Holzschachtel",
         bild: "Schokoadventskalender_in_Holzschachtel",
         preis: 1,
         imWarenkorb: 0
     },
     {
-        name: "Schokolade_und_Wein_Geschenkkorb",
+        name: "Schokolade und Wein Geschenkkorb",
         bild: "Schokolade_und_Wein_Geschenkkorb",
         preis: 2,
         imWarenkorb: 0
@@ -30,37 +30,37 @@ var Produkte = [
         imWarenkorb: 0
     },
     { //Pralinen - Vollmilch
-        name: "Mix_aus_Weiss_und_Vollmilch_Dreierlei",
+        name: "Mix aus Weiss und Vollmilch Dreierlei",
         bild: "Mix_aus_Weiss_und_Vollmilch_Dreierlei",
         preis: 6,
         imWarenkorb: 0
     },
     {
-        name: "Mouse_gefuellte_Praline",
+        name: "Mouse gefuellte Praline",
         bild: "Mouse_gefuellte_Praline",
         preis: 7,
         imWarenkorb: 0
     },
     {
-        name: "Praline_mit_Mouse_und_fluessiger_Schokolade",
+        name: "Praline mit Mouse und fluessiger Schokolade",
         bild: "Praline_mit_Mouse_und_fluessiger_Schokolade",
         preis: 8,
         imWarenkorb: 0
     },
     {
-        name: "Vollmilch_Praline_Erdbeertopping",
+        name: "Vollmilch Praline Erdbeertopping",
         bild: "Vollmilch_Praline_Erdbeertopping",
         preis: 9,
         imWarenkorb: 0
     },
     { //Pralinen - Weiss
-        name: "Vollmilch_Praline_mit_Nuss_Karamell_oder_Zartbitter_Topping",
+        name: "Vollmilch Praline mit Nuss Karamell oder Zartbitter Topping",
         bild: "Vollmilch_Praline_mit_Nuss_Karamell_oder_Zartbitter_Topping",
         preis: 10,
         imWarenkorb: 0
     },
     {
-        name: "Die_weissen_Berge",
+        name: "Die weissen Berge",
         bild: "Die_weissen_Berge",
         preis: 11,
         imWarenkorb: 0
@@ -72,43 +72,43 @@ var Produkte = [
         imWarenkorb: 0
     },
     {
-        name: "Gefuellte_Praline_mit_Mouse_Topping",
+        name: "Gefuellte Praline mit Mouse Topping",
         bild: "Gefuellte_Praline_mit_Mouse_Topping",
         preis: 13,
         imWarenkorb: 0
     },
     {
-        name: "Kokoskugel_mit_Nussfuellung",
+        name: "Kokoskugel mit Nussfuellung",
         bild: "Kokoskugel_mit_Nussfuellung",
         preis: 14,
         imWarenkorb: 0
     },
     {
-        name: "Praline_mit_Roellchen",
+        name: "Praline mit Roellchen",
         bild: "Praline_mit_Roellchen",
         preis: 15,
         imWarenkorb: 0
     },
     { //Pralinen - Zartbitte
-        name: "Drei_Schokokugeln",
+        name: "Drei Schokokugeln",
         bild: "Drei_Schokokugeln",
         preis: 16,
         imWarenkorb: 0
     },
     {
-        name: "Mouse_gefuellt_mit_Erdbeerglasur",
+        name: "Mouse gefuellt mit Erdbeerglasur",
         bild: "Mouse_gefuellt_mit_Erdbeerglasur",
         preis: 17,
         imWarenkorb: 0
     },
     {
-        name: "Praline_mit_fluessigem_Kern",
+        name: "Praline mit fluessigem Kern",
         bild: "Praline_mit_fluessigem_Kern",
         preis: 18,
         imWarenkorb: 0
     },
     {
-        name: "Zartbitterkugel_mit_Goldglasur",
+        name: "Zartbitterkugel mit Goldglasur",
         bild: "Zartbitterkugel_mit_Goldglasur",
         preis: 19,
         imWarenkorb: 0
@@ -120,31 +120,31 @@ var Produkte = [
         imWarenkorb: 0
     },
     { //Tafeln - Vollmilch
-        name: "Selbstgemachte_Schokolade_mit_Erdbeer_Streuseln_oder_Nuessen",
+        name: "Selbstgemachte Schokolade mit Erdbeer Streuseln oder Nuessen",
         bild: "Selbstgemachte_Schokolade_mit_Erdbeer_Streuseln_oder_Nuessen",
         preis: 21,
         imWarenkorb: 0
     },
     {
-        name: "Tafel_mit_Tafelfuellung",
+        name: "Tafel mit Tafelfuellung",
         bild: "Tafel_mit_Tafelfuellung",
         preis: 22,
         imWarenkorb: 0
     },
     {
-        name: "Tafel_Vollmilch",
+        name: "Tafel Vollmilch",
         bild: "Tafel_Vollmilch",
         preis: 23,
         imWarenkorb: 0
     },
     {
-        name: "Vollmilchschokolade_mit_Nuessen_und_Kokos",
+        name: "Vollmilchschokolade mit Nuessen und Kokos",
         bild: "Vollmilchschokolade_mit_Nuessen_und_Kokos",
         preis: 24,
         imWarenkorb: 0
     },
     {
-        name: "Vollmilchschokolade_mit_Nuessen",
+        name: "Vollmilchschokolade mit Nuessen",
         bild: "Vollmilchschokolade_mit_Nuessen",
         preis: 25,
         imWarenkorb: 0
@@ -156,37 +156,37 @@ var Produkte = [
         imWarenkorb: 0
     },
     {
-        name: "Tafeln_mit_Fruechten",
+        name: "Tafeln mit Fruechten",
         bild: "Tafeln_mit_Fruechten",
         preis: 27,
         imWarenkorb: 0
     },
     {
-        name: "Weiss_und_Vollmilch_mit_Erdbeer",
+        name: "Weiss und Vollmilch mit Erdbeer",
         bild: "Weiss_und_Vollmilch_mit_Erdbeer",
         preis: 28,
         imWarenkorb: 0
     },
     {
-        name: "Weisse_Schokolade_mit_Nuessen",
+        name: "Weisse Schokolade mit Nuessen",
         bild: "Weisse_Schokolade_mit_Nuessen",
         preis: 29,
         imWarenkorb: 0
     },
     {
-        name: "Weisse_Tafel",
+        name: "Weisse Tafel",
         bild: "Weisse_Tafel",
         preis: 30,
         imWarenkorb: 0
     },
     { //Tafeln - Zartbitter
-        name: "Brownie_Zartbittertafel",
+        name: "Brownie Zartbittertafel",
         bild: "Brownie_Zartbittertafel",
         preis: 31,
         imWarenkorb: 0
     },
     {
-        name: "Chili_Schokolade",
+        name: "Chili Schokolade",
         bild: "Chili_Schokolade",
         preis: 32,
         imWarenkorb: 0
@@ -198,7 +198,7 @@ var Produkte = [
         imWarenkorb: 0
     },
     {
-        name: "Zartbitterschokolade_mit_Nuessen",
+        name: "Zartbitterschokolade mit Nuessen",
         bild: "Zartbitterschokolade_mit_Nuessen",
         preis: 34,
         imWarenkorb: 0
@@ -250,7 +250,7 @@ function zumWarenkorb(){
     var productTEST = x.textContent;
 
     for(var i = 0; i < Produkte.length; i++) {
-        if(productTEST == Produkte[i].name) {
+        if(productTEST == Produkte[i].bild) {
             var reminder = i;
             //console.log(reminder);
         }
@@ -343,15 +343,14 @@ function AusgabeEinkaufswagen(){
             InhaltWarenkorb.innerHTML += `
             <div class="PrdukteWK"> 
             <button type="Entfernen"> Entfernen </button>
-                <img src ="../../Images/Geschenkset/${Item.bild}.jpg"></img>
-                <img src ="EWIF/Webshop/Images/Geschenkset/${Item.bild}.jpg"></img>
+                <img src ="Images/Geschenkset/${Item.bild}.PNG"></img>
                 <span>${Item.name}</span>
             </div>
             <div class="Preis">${Item.preis},00 Euro</div>
             <div class="Anzahl">
-            <button type="einsWeniger"> -1 </button>
+            <button type="einsWeniger" onclick=""> -1 </button>
             ${Item.imWarenkorb}
-            <button type="einsMehr"> +1 </button>
+            <button type="einsMehr" onclick=""> +1 </button>
             </div>
 
             <div class="Preise"> Teilpreis:${Item.imWarenkorb*Item.preis},00 Euro</div>
