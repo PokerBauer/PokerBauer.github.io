@@ -245,7 +245,7 @@ if(TestObProductPage) {
 }
 */
 
-function clickTest(){
+function zumWarenkorb(){
     var x = document.querySelector("title");
     var productTEST = x.textContent;
 
@@ -264,7 +264,7 @@ function clickTest(){
 
 function AnzahlItems(Produkte) {
 
-    console.log("InAnzahlItems");
+    //console.log("InAnzahlItems");
 
     var anzahlProdukte = localStorage.getItem("AnzahlItemsWarenkorb");
     anzahlProdukte = parseInt(anzahlProdukte);
@@ -293,6 +293,11 @@ function AnzahlItems(Produkte) {
 function setItems(Produkte) {
     var ItemsWK = localStorage.getItem("ProdukteImWK");
     ItemsWK = JSON.parse(ItemsWK);
+
+    var testing101 = document.querySelector(".anzahl");
+    var numberTesting = testing101.value;
+    numberTesting = parseInt(numberTesting);
+
     if(ItemsWK != null) { //wenn bereits vorhanden ist
         if(ItemsWK[Produkte.bild] == undefined) {
             ItemsWK = {
@@ -300,9 +305,9 @@ function setItems(Produkte) {
                 [Produkte.bild] : Produkte
             }
         }
-        ItemsWK[Produkte.bild].imWarenkorb = ItemsWK[Produkte.bild].imWarenkorb + 1;
+        ItemsWK[Produkte.bild].imWarenkorb = ItemsWK[Produkte.bild].imWarenkorb + numberTesting;
     } else {
-        Produkte.imWarenkorb = 1; 
+        Produkte.imWarenkorb = numberTesting; 
         var ItemsWK = {
             [Produkte.bild] : Produkte
         } //erstellen der LS variable und setzung des attributes (?) .imWarenkorb auf 1
