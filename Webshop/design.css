@@ -9,7 +9,6 @@ a {
 	right: 0px;
 	text-align: left;
 	padding-top: 0px;
-	padding-left: 10px;
 	background-image:linear-gradient(#4f2c11, #ffeeb8);
 	height: 80px;
 	width: 100%;
@@ -58,6 +57,20 @@ h6 {
 	letter-spacing: 2px;
 	margin-bottom: 3px;
 	margin-top: 3px;
+	text-align: center;
+}
+h7 {
+	font-size: 10px;
+	color: white;
+	text-shadow: 5px 1px 10px black;
+	font-family: Helvetica, sans-serif;
+	min-width: 200px;
+	font-style: oblique;
+	letter-spacing: 2px;
+	margin-bottom: 3px;
+	margin-top: 3px;
+	display: block;
+	text-align: center;
 }
 
 body {
@@ -149,7 +162,25 @@ body,
 	margin-left: 20%;
 	background-image:linear-gradient(#4f2c11, #ffeeb8);  
 }
+.produktbildwk {
+	float:center;
+	margin-top: 10%;
+	height: 200px;
+	border:  2px solid rgba(0,0,0,0.8);
+	margin-left: 2%;
+	margin-right: 2%;
+	background-image:linear-gradient(#4f2c11, #ffeeb8);  
+	}
+
+.produktentfernen {
+	background: transparent;
+	background-image:linear-gradient(#4f2c11, #ffeeb8);
+}
 .produktbild img{
+	width: 100%;
+	height: 100%;
+}
+.produktbildwk img{
 	width: 100%;
 	height: 100%;
 }
@@ -161,6 +192,15 @@ body,
 	width: 295px;
 	height: 20px;
 	background: #ffeeb8;
+}
+.ProdukteWK {
+	text-align: center;
+}
+.anzahlbutton {
+background-image:linear-gradient(#4f2c11, #ffeeb8);
+	text-align: center;
+	margin-top: 2%;
+	margin-bottom: 2%;
 }
 input {
 		display: block;
@@ -178,6 +218,13 @@ input {
 	text-align: center;
 	width: 300px;
 	height: 50px;
+}
+
+.warenkorbitem {
+	display: inline-block;
+	width: 29%;
+	margin: 2%;
+	background: linear-gradient(#4f2c11, #ffeeb8);
 }
 .beschreibung {
 	padding-bottom: 5%;

@@ -399,18 +399,25 @@ function AusgabeEinkaufswagen(){
                 console.log(ItemsWK.bildpfad);
                         Object.values(ItemsWK).map(Item => {
                         InhaltWarenkorb.innerHTML += `
-                        <div class="PrdukteWK"> 
-                        <button type="Entfernen" onclick="ItemEntfernen(${Item.id})"> Produkt aus dem Warenkorb entfernen </button>
+                        <body>
+                        <div class="warenkorbitem">
+                        <div class="ProdukteWK"> 
+                        <button class="produktentfernen" type="Entfernen" onclick="ItemEntfernen(${Item.id})"> <h6>Produkt aus dem Warenkorb entfernen</h6> </button>
+                        <div class="produktbildwk">
                         <img src ="${Item.bildpfad}"></img>
-                        ${Item.name}
                         </div>
-                        <div class="Preis">${Item.preis},00 Euro</div>
+                        <h7>${Item.name}</h7>
+                        
+                        <div class="Preis">${Item.preis},00 Euro / Stueck</div>
                         <div class="Anzahl">
-                        <button type="einsWeniger" onclick="einsWeniger(${Item.id})"> -1 </button>
-                        ${Item.imWarenkorb}
-                        <button type="einsMehr" onclick="einsMehr(${Item.id})"> +1 </button>
+                        <button class="anzahlbutton" type="einsWeniger" onclick="einsWeniger(${Item.id})"> Anzahl um 1 verringern </button>
+                        Anzahl: ${Item.imWarenkorb}
+                        <button class="anzahlbutton" type="einsMehr" onclick="einsMehr(${Item.id})"> Anzahl um 1 erhoehen </button>
                         </div>
                         <div class="Preise"> Teilpreis:${Item.imWarenkorb*Item.preis},00 Euro</div>
+                        </div>
+                        </div>
+                        </body>
                         `
                 });//erstellt html-code der den Warenkorb darstellt
             //}
@@ -419,7 +426,7 @@ function AusgabeEinkaufswagen(){
             <div class="Gesamtpreis">
             <h4 class="GesamtpreisTitel"> Gesamtpreis:${TeilPreis},00 Euro € </h4>
             </div>
-            <button type="WarenkorbLeeren" onclick="WarenkorbLeer()"> Warenkorb komplett leeren</button>
+            <button class="produktentfernen" type="WarenkorbLeeren" onclick="WarenkorbLeer()"> <h6>Warenkorb komplett leeren</h6></button>
             `
             //erstellt html-code der den Gesamtpreis darstellt
         } else {
