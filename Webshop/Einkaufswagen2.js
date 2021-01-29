@@ -281,6 +281,9 @@ var Produkte = [
     } //Produkte unter diesem Muster hinzufügen
 ]
 
+localStorage.setItem("Produkte",  JSON.stringify(Produkte));
+
+
 var TestObProductPage = document.querySelectorAll(".produktbild");
 
 function zumWarenkorb(){
@@ -314,11 +317,9 @@ function AnzahlItems(Produkt) {
         } else {
         localStorage.setItem("AnzahlItemsWarenkorb", valueOfInput);
     }
-
-    setItems(Produkt);
 } //zähler für die anzahl der Prdoukte im WK im LocalStorage
 
-
+/*
 function setItems(Produkte) {
     var ItemsWK = localStorage.getItem("ProdukteImWK");
     ItemsWK = JSON.parse(ItemsWK);
@@ -371,12 +372,12 @@ function GesamtPreis(Produkt, Warenkorb) {
         localStorage.setItem("GesamtPreis", Produkt.preis*valueOfInput); //setzt beim erst durchlauf den preis
     }
 } //berechnet den Gesamtpreis des Einkaufes
-
+*/
 
 
 function AusgabeEinkaufswagen(ProductID){
     //imWKcleaner();
-    let ItemsWK = localStorage.getItem("ProdukteImWK");
+    let ItemsWK = localStorage.getItem("Produkte");
     console.log("before JSON"+ItemsWK);
     ItemsWK = JSON.parse(ItemsWK); //erstellt nutzbare variable mit den aktuellen Warenkorb inhalt
     console.log("after JSON"+ItemsWK);
@@ -426,7 +427,7 @@ function AusgabeEinkaufswagen(ProductID){
                         <button type="einsWeniger" onclick="einsWeniger(${Item.id})"> -1 </button>
                         ${Item.imWarenkorb}
                         <button type="einsMehr" onclick="einsMehr(${Item.id})"> +1 </button>
-                        <button type="ProduktEntfernen" onclick="produktLoeschen(${Item.name})"> Produkt aus dem Warenkorb entfernen </button>
+                        <button type="ProduktEntfernen" onclick="produktLoeschen(${Item.bild})"> Produkt aus dem Warenkorb entfernen </button>
                         </div>
                         <div class="Preise"> Teilpreis:${Item.imWarenkorb*Item.preis} EUR</div>
                         `
@@ -455,7 +456,7 @@ if (TestObWarenkorb) {
 
 function einsMehr(ProductID)  {
 
-    let ItemsWK = localStorage.getItem("ProdukteImWK");
+    let ItemsWK = localStorage.getItem("Produkte");
     ItemsWK = JSON.parse(ItemsWK); //erstellt nutzbare variable mit den aktuellen Warenkorb inhalt
 
 
@@ -471,7 +472,7 @@ function einsMehr(ProductID)  {
     anzahlProdukte = parseInt(anzahlProdukte);
     localStorage.setItem("AnzahlItemsWarenkorb", anzahlProdukte + 1);
 
-    localStorage.setItem("ProdukteImWK", JSON.stringify(ItemsWK))
+    localStorage.setItem("Produkte", JSON.stringify(ItemsWK))
     GesamtPreis(ItemsWK[name], "plusEins");
 
     AusgabeEinkaufswagen(40);
@@ -479,7 +480,7 @@ function einsMehr(ProductID)  {
 
 function einsWeniger(ProductID) {
     
-    let ItemsWK = localStorage.getItem("ProdukteImWK");
+    let ItemsWK = localStorage.getItem("Produkte");
     ItemsWK = JSON.parse(ItemsWK); //erstellt nutzbare variable mit den aktuellen Warenkorb inhalt
 
     //console.log(ItemsWK["Schokoadventskalender_in_Holzschachtel"].imWarenkorb);
@@ -509,7 +510,7 @@ function WarenkorbLeer() {
 
 
 function imWKcleaner() {
-    let ItemsWK = localStorage.getItem("ProdukteImWK");
+    let ItemsWK = localStorage.getItem("Produkte");
     ItemsWK = JSON.parse(ItemsWK);
 
     let test;
@@ -522,11 +523,11 @@ function imWKcleaner() {
     }
 }
 
-function produktLoeschen(ProductNAME) {
-    let ItemsWK = localStorage.getItem("ProdukteImWK");
+function produktLoeschen(ProductMAME) {
+    let ItemsWK = localStorage.getItem("Produkte");
     ItemsWK = JSON.parse(ItemsWK);
 
-    ItemsWK[ProductNAME].imWarenkorb = 0;
+    ItemsWK[ProductMAME] = null;
 
     console.log(ItemsWK);
 
