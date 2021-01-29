@@ -421,7 +421,7 @@ function AusgabeEinkaufswagen(ProductID){
                         <body>
                         <div class="warenkorbitem">
                         <div class="ProdukteWK"> 
-                        <button class="produktentfernen" type="Entfernen" onclick="ItemEntfernen(${Item.id})"> <h6>Produkt aus dem Warenkorb entfernen</h6> </button>
+                        <button class="produktentfernen" type="Entfernen" onclick="produktLoeschen()"> <h6>Produkt aus dem Warenkorb entfernen</h6> </button>
                         <div class="produktbildwk">
                         <img src ="${Item.bildpfad}"></img>
                         </div>
@@ -429,10 +429,9 @@ function AusgabeEinkaufswagen(ProductID){
                         
                         <div class="Preis">${Item.preis} EUR / Stueck</div>
                         <div class="Anzahl">
-                        <button class="anzahlbutton" type="einsWeniger" onclick="einsWeniger(${Item.id})"> Anzahl um 1 verringern </button>
+                        <button class="anzahlbutton" type="einsWeniger" onclick="einsWeniger( ${Item.id} )"> Anzahl um 1 verringern </button>
                         Anzahl: ${Item.imWarenkorb}
-                        <button class="anzahlbutton" type="einsMehr" onclick="einsMehr(${Item.id})"> Anzahl um 1 erhoehen </button>
-                        <button class="killItems" type="itemsLoeschen" onclick="produktLoeschen(${Item.name})"> loeschen </button>
+                        <button class="anzahlbutton" type="einsMehr" onclick="einsMehr( ${Item.id} )"> Anzahl um 1 erhoehen </button>
                         </div>
                         <div class="Preise"> Teilpreis:${Item.imWarenkorb*Item.preis} EUR</div>
                         </div>
@@ -531,7 +530,9 @@ function imWKcleaner() {
     }
 }
 
-function produktLoeschen(ProductNAME) {
+function produktLoeschen(ProductName) { // ${Item.name} 
+console.log(ProductName);
+    /*
     let ItemsWK = localStorage.getItem("ProdukteImWK");
     ItemsWK = JSON.parse(ItemsWK);
 
