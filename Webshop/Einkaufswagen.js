@@ -427,13 +427,14 @@ function AusgabeEinkaufswagen(ProductID){
                         </div>
                         <h7>${Item.name}</h7>
                         
-                        <div class="Preis">${Item.preis},00 Euro / Stueck</div>
+                        <div class="Preis">${Item.preis} EUR / Stueck</div>
                         <div class="Anzahl">
                         <button class="anzahlbutton" type="einsWeniger" onclick="einsWeniger(${Item.id})"> Anzahl um 1 verringern </button>
                         Anzahl: ${Item.imWarenkorb}
                         <button class="anzahlbutton" type="einsMehr" onclick="einsMehr(${Item.id})"> Anzahl um 1 erhoehen </button>
+                        <button class="killItems" type="itemsLoeschen" onclick="produktLoeschen(${Item.name})"> loeschen </button>
                         </div>
-                        <div class="Preise"> Teilpreis:${Item.imWarenkorb*Item.preis},00 Euro</div>
+                        <div class="Preise"> Teilpreis:${Item.imWarenkorb*Item.preis} EUR</div>
                         </div>
                         </div>
                         </body>
