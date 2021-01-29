@@ -354,7 +354,6 @@ function AusgabeEinkaufswagen() {
         InhaltWarenkorb.innerHTML = "";
         Object.values(ItemsWK2).map(Item => {
             InhaltWarenkorb.innerHTML += `
-
                         <body>
                         <div class="warenkorbitem">
                         <div class="ProdukteWK"> 
