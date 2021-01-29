@@ -9,21 +9,25 @@ a {
 	right: 0px;
 	text-align: left;
 	padding-top: 0px;
-	padding-left: 10px;
 	background-image:linear-gradient(#4f2c11, #ffeeb8);
 	height: 80px;
 	width: 100%;
+	
 }
 
 .header img {
 	height: 80%;
-	width: 10%;
+	width: auto;
+	margin-left: 30px;
 	margin-right: 30px;
+	margin-top: 5px;
 	float: left;
 }
+/* Logotext */
 h1 {
 	font-size: 60px;
-	color: black;
+	color: white;
+	text-shadow: 5px 1px 10px black;
 	font-family: Helvetica, sans-serif;
 	min-width: 200px;
 	font-style: oblique;
@@ -31,42 +35,33 @@ h1 {
 	margin-top: 0px;
 	padding-top: 0px;
 }
-h2 {
-	font-size: 30px;
-	color: #5f4019;
-	text-shadow: 5px 1px 10px #e88b45;
-	font-family: Helvetica, sans-serif;
-	min-width: 200px;
-	font-style: oblique;
-	letter-spacing: 2px;
-	margin-top: 0px;
-	padding-top: 5px;
-	padding-bottom: 5px;
-}
+/* Produktseiten�berschrift */
 
-h6 {
-	font-size: 20px;
-	color: #5f4019;
-	text-shadow: 5px 1px 10px #e88b45;
+h7 {
+	font-size: 10px;
+	color: white;
+	text-shadow: 5px 1px 10px black;
 	font-family: Helvetica, sans-serif;
 	min-width: 200px;
 	font-style: oblique;
 	letter-spacing: 2px;
 	margin-bottom: 3px;
-	margin-top: 20px;
+	margin-top: 3px;
+	display: block;
+	text-align: center;
 }
 
 body {
 	font-family: Helvetica, sans-serif;
 	color: #5f4019;
 	padding: 80px 0 48px;
-	margin-top: 0px;
 	background-image: radial-gradient(#4f2c11, #ffeeb8);
 	overflow-x : hidden;
 	overflow-y : scroll;
+	margin: 0px
 }
 
-body,
+
 .wrapper {
 	margin: 0px auto;
 	max-width: 1600px;
@@ -74,14 +69,15 @@ body,
 
 .nav {
   overflow: hidden;
-	background-image:linear-gradient(#4f2c11, #ffeeb8);  
-	position: sticky;
+  background-image:linear-gradient(#4f2c11, #ffeeb8);  
+  position: sticky;
   top: 0px; 
   width: 100%; 
   text-align: center;
   height: 40px;
   border-bottom: 2px solid rgba(0,0,0,0.3);
   border-top: 2px solid rgba(0,0,0,0.2);
+  z-index: 1;
 }
 .nav a {
   padding-top: 10px;
@@ -128,19 +124,133 @@ body,
 	display: inline-block;
 	background-image:linear-gradient(#4f2c11, #ffeeb8);  
 }
+
+
 .produktbild {
-	width: 25%;
+	float: left;
+	margin-top: 10%;
 	height: 250px;
+	width: 20%;
 	border:  2px solid rgba(0,0,0,0.8);
-	margin-top: 10px;
-	margin-left: 6%;
-	display: inline-block;
+	margin-left: 20%;
 	background-image:linear-gradient(#4f2c11, #ffeeb8);  
 }
-.produktbild img{
-	max-width: 100%;
-	max-height: 100%;
+.produktbildwk {
+	float:center;
+	margin-top: 10%;
+	height: 200px;
+	border:  2px solid rgba(0,0,0,0.8);
+	margin-left: 2%;
+	margin-right: 2%;
+	background-image:linear-gradient(#4f2c11, #ffeeb8);  
+	}
+
+.produktentfernen {
+	background: transparent;
+	background-image:linear-gradient(#4f2c11, #ffeeb8);
 }
+.produktbild img{
+	width: 100%;
+	height: 100%;
+}
+.produktbildwk img{
+	width: 100%;
+	height: 100%;
+}
+
+
+/* einzelne Produktseiten */
+h2 {
+	font-size: 25px;
+	color: white;
+	text-shadow: 5px 1px 10px black;
+	font-family: Helvetica, sans-serif;
+	font-style: oblique;
+	letter-spacing: 1px;
+	display: inline;
+}
+
+h3 {
+	font-size: 15px;
+	color: white;
+	display: inline;
+}
+h4 {
+	color:white;
+	font-size: 15px;
+	display: block;
+}
+
+h6 {
+	font-size: 20px;
+	color: white;
+	text-shadow: 5px 1px 10px black;
+	font-family: Helvetica, sans-serif;
+	font-style: oblique;
+	text-align: center;
+	display: inline;
+}
+
+.produkt {
+	background-color: transparent;
+	height: 100%;
+	width: 90%;
+	margin: 0 auto;
+}
+
+.produktinfo {
+	padding-left: 45%;
+	padding-top: 10%;
+}
+
+.anzahl {
+	width: 5%;
+	height: 24px;
+	background: #ffeeb8;
+	display: inline;
+	margin-right: 0%;
+	border: 2px solid rgba(0,0,0,0.4);
+	text-align: center;
+	vertical-align: top;
+	
+	}
+
+.Warenkorb {
+	background: linear-gradient(#4f2c11, #ffeeb8);
+	text-align: center;
+	height: 30px;
+	display: inline;
+	line-height: 1.1;
+	vertical-align: top;
+	}
+
+.beschreibung {
+	margin-bottom: 5%;
+	margin-top: 5%;
+}
+
+.preis {
+	padding-right: 10%;
+	margin-top: 5%;
+	margin-bottom: 5%;
+}
+/*---------------------------------------------*/
+
+.ProdukteWK {
+	text-align: center;
+}
+.produktname {
+    padding-top: 20px;
+	text-align: center;
+}
+
+.warenkorbitem {
+	display: inline-block;
+	width: 29%;
+	margin: 2%;
+	background: linear-gradient(#4f2c11, #ffeeb8);
+}
+
 .angebot:hover {
 	border: 2px solid red;
 }
@@ -187,11 +297,47 @@ body,
 	font-size: 20px;
 	background-image:linear-gradient(#4f2c11, #ffeeb8);
 }
+/* Startseite */
+h5 {
+	font-size: 25px;
+	color: white;
+	text-shadow: 5px 1px 10px black;
+	font-family: Helvetica, sans-serif;
+	font-style: oblique;
+	letter-spacing: 1px;
 
-/* Table */
+}
+/* Warenkorb */
+.anzahlbutton {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+/* Produktkatalog */
+h8 {
+font-size: 20px;
+	color: white;
+	text-shadow: 5px 1px 10px black;
+	font-family: Helvetica, sans-serif;
+	font-style: oblique;
+	text-align: left;
+	display: block;
+	margin-top: 10%;
+	letter-spacing: 8px;
+	margin-left: 20%;
+}
+h9 {
+font-size: 10px;
+	color: white;
+	font-size: 15px;
+	font-family: Helvetica, sans-serif;
+}
         
 .table {
          table-layout: fixed;
+		 position: relative;
+		 
+		 
 }
         
 .table b {
@@ -201,21 +347,31 @@ body,
 }
         
 .columnleft {
-        background: transparent;
+    background: transparent;
 	height: 100%;
 	min-width: 205px;
 	vertical-align: top; 
-	
+	position: fixed;
+	border-right: 5px solid rgba(0,0,0,0.2);
+	border-right-style: double;
+	position: absolute;
+	top: 0;
+	padding-right: 8%;
 }
+
+
 		
 .columnright {
-	width: 895px; 
-	padding: 1px 200px;
+	width: 100%; 
+	padding-left: 35%;
+	padding-right: 10%;
 }
 
 /* Control Buttons Div Box */		
 .btnContainer{
         padding-left: 15px;
+		position: fixed;
+		
 }
 
 /* Link */
@@ -228,11 +384,14 @@ body,
         
 .filter_btn {
         background-color: transparent;
-        color: white;
         font-family: avenir-lt-w01_35-light1475496, sans-serif;
         font-size: 15px;
         border: none;
         outline: none;
+		display: block;
+		margin-left: 35%;
+		margin-top: 2%;
+		
 }
         
 .filter_btn:hover {
@@ -244,6 +403,9 @@ body,
         float: left;
         display: none;
         padding: 7.5px;
+		border:  2px solid rgba(0,0,0,0.3);
+		margin-right: 20px;
+		margin-bottom: 20px;
 }
 
 /* Products Div Box */
@@ -252,6 +414,7 @@ body,
     float: bottom;
     max-width: 200px;
 	min-width: 200px;
+	text-shadow: 5px 5px 10px black;
 }
 
 .subElemP {
@@ -272,11 +435,7 @@ body,
 .show {
         display: block;
 }
-button {
-	width: 100%;
-	text-align: left;
-	margin-top: 0px;
-}
+
         
 
         
@@ -289,5 +448,5 @@ button {
         
 .brlarge {
         display: block;
-        margin-bottom: 8em;
+        margin-bottom: 5em;
 }

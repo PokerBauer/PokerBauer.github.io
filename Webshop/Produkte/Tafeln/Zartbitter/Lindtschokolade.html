@@ -6,7 +6,7 @@
     <link href="../../../design.css" rel="stylesheet" type="text/css">
     <script src="../../../Einkaufswagen.js"></script>
 </head>
-<div class="header"> <img src="../../../Images/warenkorb1.png" alt="logo">
+<div class="header"> <img src="../../../Images/logo.png" alt="logo">
     <h1>Chocolate Land</h1>
 </div>
 <div class="nav">
@@ -19,37 +19,32 @@
     <!-- BODY -->
     <div class="body">
         <div class="produkt">
-            <div class="produktname">
-                <h2>
-                    Lindtschokolade
-                </h2>
-            </div>
             <div class="produktbild">
                 <img src="../../../Images/Tafeln/Zartbitter/Lindtschokolade.png" alt="Lindtschokolade">
             </div>
             <div class="produktinfo">
+                <h2>Lindtschokolade</h2>
+                <div class="preis">
+                    <h2>
+                        Preis: <h3>3,49 EUR</h3>
+                    </h2>
+                </div>
+                <h2>Anzahl: </h2>    
+                <input class="anzahl" value="0" type="number" max="100" min="1">
+                <a href="../../../Warenkorb.html">
+                    <button class="Warenkorb" onclick="zumWarenkorb()">
+                        <h6>In den Warenkorb</h6>  
+                    </button>
+                </a> 
                 <div class="beschreibung">
                     <h2>
                         Informationen: 
-                        <h3>hier stehen Infos</h3>
+                        <h4>Diese Lindtschokolade verwoehnt Liebhaber dunkler Schokolade mit ihren aeußeren und inneren Qualitaeten. Mit zartschmelzender Fuellung und kraeftigem Geschmack kommen sueße Gourmets hier auf ihre vollen Kosten.</h4>    
                     </h2>  
-                </div>
-                <div class="preis">
-                    <h2>
-                        Preis:<h4>0.00€</h4>
-                    </h2>
-                        <h5>Anzahl</h5>    
-                        <input class="anzahl" value="0" type="number" max="100" min="1">
-                    <div class="button">
-                        <button class="Warenkorb" onclick="zumWarenkorb()">
-                            <h6>In den Warenkorb</h6>
-                        </button>
-                    </div>  
                 </div>
             </div>
         </div>
     </div>
-    <br>
 </body>
 <!-- FOOTER -->
 <div class="footer">
