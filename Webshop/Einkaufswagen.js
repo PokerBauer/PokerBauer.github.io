@@ -286,49 +286,23 @@ var TestObProductPage = document.querySelectorAll(".produktbild");
 function zumWarenkorb(){
     var x = document.querySelector("title");
     var productTEST = x.textContent;
-
     for(var i = 0; i < Produkte.length; i++) {
         if(productTEST == Produkte[i].bild) {
             var reminder = i;
         }
     }
-
-    AnzahlItems(Produkte[reminder]);
-    GesamtPreis(Produkte[reminder], "false");
-    AusgabeEinkaufswagen(40);
+    setItems(Produkte[reminder]);
+    AusgabeEinkaufswagen();
 }
-
-
-function AnzahlItems(Produkt) {
-
-    var anzahlProdukte = localStorage.getItem("AnzahlItemsWarenkorb");
-    anzahlProdukte = parseInt(anzahlProdukte);
-
-    var inputWithNumberOfItems = document.querySelector(".anzahl");
-
-    var valueOfInput = inputWithNumberOfItems.value;
-    valueOfInput = parseInt(valueOfInput);
-
-    if (anzahlProdukte) {
-        localStorage.setItem("AnzahlItemsWarenkorb", anzahlProdukte + valueOfInput);
-        } else {
-        localStorage.setItem("AnzahlItemsWarenkorb", valueOfInput);
-    }
-
-    setItems(Produkt);
-} //zähler für die anzahl der Prdoukte im WK im LocalStorage
-
 
 function setItems(Produkte) {
     var ItemsWK = localStorage.getItem("ProdukteImWK");
     ItemsWK = JSON.parse(ItemsWK);
-
     var inputWithNumberOfItems = document.querySelector(".anzahl");
     var valueOfInput = inputWithNumberOfItems.value;
     valueOfInput = parseInt(valueOfInput);
 
     if(ItemsWK != null) { //wenn bereits vorhanden ist
-
         if(ItemsWK[Produkte.bild] == undefined) {
             ItemsWK = {
                 ...ItemsWK,
@@ -345,120 +319,79 @@ function setItems(Produkte) {
     localStorage.setItem("ProdukteImWK", JSON.stringify(ItemsWK))
 }//erstellt variable im LocalStorage und erhöht diese um die Eingabe im Input
 
-function GesamtPreis(Produkt, Warenkorb) {
-    let TeilPreis = localStorage.getItem("GesamtPreis"); 
 
-    var inputWithNumberOfItems = document.querySelector(".anzahl");
-
-
-    if(TeilPreis != null && Warenkorb == "false") {
-        var valueOfInput = inputWithNumberOfItems.value;
-        valueOfInput = parseInt(valueOfInput);
-        TeilPreis = parseFloat(TeilPreis);
-        localStorage.setItem("GesamtPreis", TeilPreis+Produkt.preis*valueOfInput); //erhöht den Preis um den neuen Produkt preis
-    } else if (TeilPreis != null && Warenkorb == "plusEins") {
-        TeilPreis = parseFloat(TeilPreis);
-        localStorage.setItem("GesamtPreis", TeilPreis+Produkt.preis); //erhöht den Preis um den neuen Produkt preis
-    } else if (TeilPreis != null && Warenkorb == "minusEins") {
-        TeilPreis = parseFloat(TeilPreis);
-        localStorage.setItem("GesamtPreis", TeilPreis-Produkt.preis);
-    } else if(TeilPreis != null && Warenkorb == "remove") {
-        TeilPreis = parseFloat(TeilPreis);
-        localStorage.setItem("GesamtPreis", TeilPreis- (Produkt.preis * Produkt.imWarenkorb));
-    } else{
-        var valueOfInput = inputWithNumberOfItems.value;
-        valueOfInput = parseInt(valueOfInput);
-        localStorage.setItem("GesamtPreis", Produkt.preis*valueOfInput); //setzt beim erst durchlauf den preis
-    }
-} //berechnet den Gesamtpreis des Einkaufes
-
-
-
-function AusgabeEinkaufswagen(ProductID){
+function AusgabeEinkaufswagen(){
     //imWKcleaner();
     let ItemsWK = localStorage.getItem("ProdukteImWK");
-    console.log("before JSON"+ItemsWK);
     ItemsWK = JSON.parse(ItemsWK); //erstellt nutzbare variable mit den aktuellen Warenkorb inhalt
-    console.log("after JSON"+ItemsWK);
     
 
     let InhaltWarenkorb = document.querySelector(".InhaltWarenkorb");
 
-    var TestObWarenkorb = document.querySelector(".InhaltWarenkorb");
-
-    if(ProductID < 39) {
-    } else {
-        for (var i = 0; i < Produkte.length; i++) {
-            if(Produkte[i].id == ProductID) {
-                var name = Produkte[i].bild;
-            }
-        }
-    }
-
-    var namesWK = "";
+    var ItemsWK2;
+    var GesamtPreis2 = 0;
 
     for (var i = 0; i < Produkte.length; i++) {
         try {
             if(ItemsWK[Produkte[i].bild].bild == Produkte.bild) {} //erzwinge fehler um die Produkte im WK zu ermitteln (whacke lösung)
             var name = Produkte[i].bild;
-            if(ItemsWK[name].imWarenkorb < 1) {
-                console.log("founde the fucker");
-                namesWK += ItemsWK[name].bild;
+            if(ItemsWK[name].imWarenkorb < 0) {
+            } else {
+                var namesWK2 = ItemsWK[name].bild;
+                ItemsWK2 = {
+                    ...ItemsWK2,
+                [namesWK2] : ItemsWK[namesWK2]
+                }
+                GesamtPreis2 += ItemsWK[namesWK2].preis * ItemsWK[namesWK2].imWarenkorb;    
             }
          } catch (e) {}
     }
 
-    console.log(namesWK);
+    GesamtPreis2 = GesamtPreis2.toFixed(2);
 
-    if(TestObWarenkorb) { //checkt ob es die Warenkorb seite ist
-        if(ItemsWK && InhaltWarenkorb)  { //checkt ob es die Warenkorb seite ist
-            //if(ItemsWK[name].imWarenkorb < 1) {
 
+        if(ItemsWK2 && InhaltWarenkorb)  { //checkt ob es die Warenkorb seite ist
                 InhaltWarenkorb.innerHTML = "";
-                        Object.values(ItemsWK).map(Item => {
+                        Object.values(ItemsWK2).map(Item => {
                         InhaltWarenkorb.innerHTML += `
 
                         <body>
                         <div class="warenkorbitem">
                         <div class="ProdukteWK"> 
-                        <button class="produktentfernen" type="Entfernen" onclick="produktLoeschen()"> <h6>Produkt aus dem Warenkorb entfernen</h6> </button>
+                        <button class="produktentfernen" type="Entfernen" onclick="produktLoeschen(${Item.id})"> <h6>Produkt aus dem Warenkorb entfernen</h6> </button>
                         <div class="produktbildwk">
                         <img src ="${Item.bildpfad}"></img>
                         </div>
                         <h7>${Item.name}</h7>
                         
-                        <div class="Preis">${Item.preis} EUR / Stueck</div>
+                        <div class="Preis">${(Item.preis).toFixed(2)} EUR / Stueck</div>
                         <div class="Anzahl">
                         <button class="anzahlbutton" type="einsWeniger" onclick="einsWeniger( ${Item.id} )"> Anzahl um 1 verringern </button>
                         Anzahl: ${Item.imWarenkorb}
                         <button class="anzahlbutton" type="einsMehr" onclick="einsMehr( ${Item.id} )"> Anzahl um 1 erhoehen </button>
                         </div>
-                        <div class="Preise"> Teilpreis:${Item.imWarenkorb*Item.preis} EUR</div>
+                        <div class="Preise"> Teilpreis:${(Item.imWarenkorb*Item.preis).toFixed(2)} EUR</div>
                         </div>
                         </div>
                         </body>
                         `
                 });//erstellt html-code der den Warenkorb darstellt
-            let TeilPreis = localStorage.getItem("GesamtPreis");
             InhaltWarenkorb.innerHTML += `
             <div class="Gesamtpreis">
-            <h4 class="GesamtpreisTitel"> Gesamtpreis:${TeilPreis} EUR </h4>
+            <h4 class="GesamtpreisTitel"> Gesamtpreis:${GesamtPreis2} EUR </h4>
             </div>
             <button class="produktentfernen" type="WarenkorbLeeren" onclick="WarenkorbLeer()"> <h6>Warenkorb komplett leeren</h6></button>
             `
             //erstellt html-code der den Gesamtpreis darstellt
-        //} 
-
     }else {
             InhaltWarenkorb.innerHTML = "";
             InhaltWarenkorb.innerHTML += `<h3>Ihr Warenkorb ist leer!</h3>`;
         } //Wird nur ausgegeben wenn der Warenkorb leer ist
     }
-}
 
 var TestObWarenkorb = document.querySelector(".InhaltWarenkorb");
 if (TestObWarenkorb) {
-    AusgabeEinkaufswagen(40);
+    AusgabeEinkaufswagen();
 }
 
 function einsMehr(ProductID)  {
@@ -475,22 +408,15 @@ function einsMehr(ProductID)  {
 
     ItemsWK[name].imWarenkorb += 1;
 
-    var anzahlProdukte = localStorage.getItem("AnzahlItemsWarenkorb");
-    anzahlProdukte = parseInt(anzahlProdukte);
-    localStorage.setItem("AnzahlItemsWarenkorb", anzahlProdukte + 1);
-
     localStorage.setItem("ProdukteImWK", JSON.stringify(ItemsWK))
-    GesamtPreis(ItemsWK[name], "plusEins");
 
-    AusgabeEinkaufswagen(40);
+    AusgabeEinkaufswagen();
 }
 
 function einsWeniger(ProductID) {
     
     let ItemsWK = localStorage.getItem("ProdukteImWK");
     ItemsWK = JSON.parse(ItemsWK); //erstellt nutzbare variable mit den aktuellen Warenkorb inhalt
-
-    //console.log(ItemsWK["Schokoadventskalender_in_Holzschachtel"].imWarenkorb);
 
     for (var i = 0; i < Produkte.length; i++) {
         if(Produkte[i].id == ProductID) {
@@ -500,19 +426,14 @@ function einsWeniger(ProductID) {
 
     ItemsWK[name].imWarenkorb -= 1;
 
-    var anzahlProdukte = localStorage.getItem("AnzahlItemsWarenkorb");
-    anzahlProdukte = parseInt(anzahlProdukte);
-    localStorage.setItem("AnzahlItemsWarenkorb", anzahlProdukte - 1);
-
     localStorage.setItem("ProdukteImWK", JSON.stringify(ItemsWK))
-    GesamtPreis(ItemsWK[name], "minusEins");
 
-    AusgabeEinkaufswagen(40);
+    AusgabeEinkaufswagen();
 }
 
 function WarenkorbLeer() {
     localStorage.clear();
-    AusgabeEinkaufswagen(40);
+    AusgabeEinkaufswagen();
 }
 
 
@@ -530,22 +451,8 @@ function imWKcleaner() {
     }
 }
 
-function produktLoeschen(ProductName) { // ${Item.name} 
-console.log(ProductName);
-    /*
-    let ItemsWK = localStorage.getItem("ProdukteImWK");
-    ItemsWK = JSON.parse(ItemsWK);
+function produktLoeschen(ProductID) { 
 
-    ItemsWK[ProductNAME].imWarenkorb = 0;
-
-    console.log(ItemsWK);
-
-    //localStorage.setItem("ProdukteImWK", JSON.stringify(ItemsWK))
-
-    //console.log(ItemsWK[ProductMAME].bild);
-
-    //ItemsWK[ProductMAME] = "";
-    /*
 
 
     for (var i = 0; i < Produkte.length; i++) {
@@ -553,16 +460,15 @@ console.log(ProductName);
             var name = Produkte[i].bild;
         }
     }
-    //console.log(ItemsWK);
-    GesamtPreis(ItemsWK[name], "remove");
+    
+    
+    let ItemsWK = localStorage.getItem("ProdukteImWK");
+    ItemsWK = JSON.parse(ItemsWK);
 
-    var reduceAnzahlWarenkorb = ItemsWK[name].imWarenkorb;
-    ItemsWK[name].imWarenkorb = 0;
+
+    ItemsWK[name].imWarenkorb = -1;
     localStorage.setItem("ProdukteImWK", JSON.stringify(ItemsWK));
-    var anzahlProdukte = localStorage.getItem("AnzahlItemsWarenkorb");
-    anzahlProdukte = parseInt(anzahlProdukte);
-    localStorage.setItem("AnzahlItemsWarenkorb", anzahlProdukte - reduceAnzahlWarenkorb);
-    */
+    AusgabeEinkaufswagen();
 }
 
 // },
