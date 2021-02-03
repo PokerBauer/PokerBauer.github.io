@@ -379,9 +379,11 @@ function AusgabeEinkaufswagen() {
         });//erstellt html-code der den Warenkorb darstellt
         InhaltWarenkorb.innerHTML += `
             <div class="Gesamtpreis">
-            <h4 class="GesamtpreisTitel"> Gesamtpreis:${GesamtPreis2} EUR </h4>
+                <h4 class="GesamtpreisTitel"> 
+                    Gesamtpreis:${GesamtPreis2} EUR 
+                </h4>
             </div>
-            <button class="warenkorbleeren" type="WarenkorbLeeren" onclick="WarenkorbLeer()"> <h6>Warenkorb komplett leeren</h6></button>
+            <button class="warenkorbleeren" type="WarenkorbLeeren" onclick="WarenkorbLeer()"> <h6>Jetzt kaufen</h6></button>
             `
         //erstellt html-code der den Gesamtpreis darstellt
     } else {
@@ -430,6 +432,7 @@ function einsWeniger(ProductID) {
 
 function WarenkorbLeer() {
     localStorage.clear();
+    window.alert("Vielen Dank fuer Ihren Einkauf!");
     AusgabeEinkaufswagen();
 }
 
