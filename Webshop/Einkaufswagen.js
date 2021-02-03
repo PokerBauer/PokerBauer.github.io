@@ -5,7 +5,7 @@ var Produkte = [
         preis: 25.90,
         imWarenkorb: 0,
         id: 1,
-        bildpfad: "Images/Geschenkset/Schokoadventskalender_in_Holzschachtel.PNG"
+        bildpfad: "Images/Geschenkset/Schokoadventskalender_in_Holzschachtel.png"
     },
     {
         name: "Schokolade und Wein Geschenkkorb",
@@ -13,7 +13,7 @@ var Produkte = [
         preis: 75.99,
         imWarenkorb: 0,
         id: 2,
-        bildpfad: "Images/Geschenkset/Schokolade_und_Wein_Geschenkkorb.PNG"
+        bildpfad: "Images/Geschenkset/Schokolade_und_Wein_Geschenkkorb.png"
     },
     {
         name: "Schokotorte",
@@ -21,7 +21,7 @@ var Produkte = [
         preis: 27.85,
         imWarenkorb: 0,
         id: 3,
-        bildpfad: "Images/Geschenkset/Schokotorte.PNG"
+        bildpfad: "Images/Geschenkset/Schokotorte.png"
     },
     {
         name: "Schokowerkzeuge",
@@ -29,7 +29,7 @@ var Produkte = [
         preis: 9.99,
         imWarenkorb: 0,
         id: 4,
-        bildpfad: "Images/Geschenkset/Schokowerkzeuge.PNG"
+        bildpfad: "Images/Geschenkset/Schokowerkzeuge.png"
     },
     {
         name: "Trueffel_Geschenkbox",
@@ -37,7 +37,7 @@ var Produkte = [
         preis: 4.75,
         imWarenkorb: 0,
         id: 5,
-        bildpfad: "Images/Geschenkset/Trueffel_Geschenkbox.PNG"
+        bildpfad: "Images/Geschenkset/Trueffel_Geschenkbox.png"
     },
     { //Pralinen - Vollmilch
         name: "Mix aus Weiss und Vollmilch Dreierlei",
@@ -45,7 +45,7 @@ var Produkte = [
         preis: 3.50,
         imWarenkorb: 0,
         id: 6,
-        bildpfad: "Images/Pralinen/Vollmilch/Mix_aus_Weiss_und_Vollmilch_Dreierlei.PNG"
+        bildpfad: "Images/Pralinen/Vollmilch/Mix_aus_Weiss_und_Vollmilch_Dreierlei.png"
     },
     {
         name: "Mouse gefuellte Praline",
@@ -53,7 +53,7 @@ var Produkte = [
         preis: 2.90,
         imWarenkorb: 0,
         id: 7,
-        bildpfad: "Images/Pralinen/Vollmilch/Mouse_gefuellte_Praline.PNG"
+        bildpfad: "Images/Pralinen/Vollmilch/Mouse_gefuellte_Praline.png"
     },
     {
         name: "Praline mit Mouse und fluessiger Schokolade",
@@ -61,7 +61,7 @@ var Produkte = [
         preis: 0.30,
         imWarenkorb: 0,
         id: 8,
-        bildpfad: "Images/Pralinen/Vollmilch/Praline_mit_Mouse_und_fluessiger_Schokolade.PNG"
+        bildpfad: "Images/Pralinen/Vollmilch/Praline_mit_Mouse_und_fluessiger_Schokolade.png"
     },
     {
         name: "Vollmilch Praline Erdbeertopping",
@@ -69,7 +69,7 @@ var Produkte = [
         preis: 0.30,
         imWarenkorb: 0,
         id: 9,
-        bildpfad: "Images/Pralinen/Vollmilch/Vollmilch_Praline_Erdbeertopping.PNG"
+        bildpfad: "Images/Pralinen/Vollmilch/Vollmilch_Praline_Erdbeertopping.png"
     },
     {
         name: "Vollmilch Praline mit Nuss Karamell oder Zartbitter Topping",
@@ -77,7 +77,7 @@ var Produkte = [
         preis: 0.25,
         imWarenkorb: 0,
         id: 10,
-        bildpfad: "Images/Pralinen/Vollmilch/Vollmilch_Praline_mit_Nuss_Karamell_oder_Zartbitter_Topping.PNG"
+        bildpfad: "Images/Pralinen/Vollmilch/Vollmilch_Praline_mit_Nuss_Karamell_oder_Zartbitter_Topping.png"
     },
     {//Pralinen - Weiss
         name: "Die weissen Berge",
@@ -85,7 +85,7 @@ var Produkte = [
         preis: 1.90,
         imWarenkorb: 0,
         id: 11,
-        bildpfad: "Images/Pralinen/Weiss/Die_weissen_Berge.PNG"
+        bildpfad: "Images/Pralinen/Weiss/Die_weissen_Berge.png"
     },
     {
         name: "Erdbeertraum",
@@ -93,7 +93,7 @@ var Produkte = [
         preis: 0.33,
         imWarenkorb: 0,
         id: 12,
-        bildpfad: "Images/Pralinen/Weiss/Erdbeertraum.PNG"
+        bildpfad: "Images/Pralinen/Weiss/Erdbeertraum.png"
     },
     {
         name: "Gefuellte Praline mit Mouse Topping",
@@ -101,7 +101,7 @@ var Produkte = [
         preis: 0.33,
         imWarenkorb: 0,
         id: 13,
-        bildpfad: "Images/Pralinen/Weiss/Gefuellte_Praline_mit_Mouse_Topping.PNG"
+        bildpfad: "Images/Pralinen/Weiss/Gefuellte_Praline_mit_Mouse_Topping.png"
     },
     {
         name: "Kokoskugel mit Nussfuellung",
@@ -109,7 +109,7 @@ var Produkte = [
         preis: 0.30,
         imWarenkorb: 0,
         id: 14,
-        bildpfad: "Images/Pralinen/Weiss/Kokoskugel_mit_Nussfuellung.PNG"
+        bildpfad: "Images/Pralinen/Weiss/Kokoskugel_mit_Nussfuellung.png"
     },
     {
         name: "Praline mit Roellchen",
@@ -117,7 +117,7 @@ var Produkte = [
         preis: 0.30,
         imWarenkorb: 0,
         id: 15,
-        bildpfad: "Images/Pralinen/Weiss/Praline_mit_Roellchen.PNG"
+        bildpfad: "Images/Pralinen/Weiss/Praline_mit_Roellchen.png"
     },
     { //Pralinen - Zartbitte
         name: "Drei Schokokugeln",
@@ -125,7 +125,7 @@ var Produkte = [
         preis: 2.90,
         imWarenkorb: 0,
         id: 16,
-        bildpfad: "Images/Pralinen/Zartbitter/Drei_Schokokugeln.PNG"
+        bildpfad: "Images/Pralinen/Zartbitter/Drei_Schokokugeln.png"
     },
     {
         name: "Mouse gefuellt mit Erdbeerglasur",
@@ -133,7 +133,7 @@ var Produkte = [
         preis: 0.33,
         imWarenkorb: 0,
         id: 17,
-        bildpfad: "Images/Pralinen/Zartbitter/Mouse_gefuellt_mit_Erdbeerglasur.PNG"
+        bildpfad: "Images/Pralinen/Zartbitter/Mouse_gefuellt_mit_Erdbeerglasur.png"
     },
     {
         name: "Praline mit fluessigem Kern",
@@ -141,7 +141,7 @@ var Produkte = [
         preis: 0.33,
         imWarenkorb: 0,
         id: 18,
-        bildpfad: "Images/Pralinen/Zartbitter/Praline_mit_fluessigem_Kern.PNG"
+        bildpfad: "Images/Pralinen/Zartbitter/Praline_mit_fluessigem_Kern.png"
     },
     {
         name: "Zartbitterkugel mit Goldglasur",
@@ -149,7 +149,7 @@ var Produkte = [
         preis: 0.25,
         imWarenkorb: 0,
         id: 19,
-        bildpfad: "Images/Pralinen/Zartbitter/Zartbitterkugel_mit_Goldglasur.PNG"
+        bildpfad: "Images/Pralinen/Zartbitter/Zartbitterkugel_mit_Goldglasur.png"
     },
     {
         name: "Zartbitterpraline",
@@ -157,7 +157,7 @@ var Produkte = [
         preis: 0.25,
         imWarenkorb: 0,
         id: 20,
-        bildpfad: "Images/Pralinen/Zartbitter/Zartbitterpraline.PNG"
+        bildpfad: "Images/Pralinen/Zartbitter/Zartbitterpraline.png"
     },
     { //Tafeln - Vollmilch
         name: "Selbstgemachte Schokolade mit Erdbeer Streuseln oder Nuessen",
@@ -165,7 +165,7 @@ var Produkte = [
         preis: 3.99,
         imWarenkorb: 0,
         id: 21,
-        bildpfad: "Images/Tafeln/Vollmilch/Selbstgemachte_Schokolade_mit_Erdbeer_Streuseln_oder_Nuessen.PNG"
+        bildpfad: "Images/Tafeln/Vollmilch/Selbstgemachte_Schokolade_mit_Erdbeer_Streuseln_oder_Nuessen.png"
     },
     {
         name: "Tafel mit Milchfuellung",
@@ -173,7 +173,7 @@ var Produkte = [
         preis: 2.49,
         imWarenkorb: 0,
         id: 22,
-        bildpfad: "Images/Tafeln/Vollmilch/Tafel_mit_Milchfuellung.PNG"
+        bildpfad: "Images/Tafeln/Vollmilch/Tafel_mit_Milchfuellung.png"
     },
     {
         name: "Tafel Vollmilch",
@@ -181,7 +181,7 @@ var Produkte = [
         preis: 3.49,
         imWarenkorb: 0,
         id: 23,
-        bildpfad: "Images/Tafeln/Vollmilch/Tafel_Vollmilch.PNG"
+        bildpfad: "Images/Tafeln/Vollmilch/Tafel_Vollmilch.png"
     },
     {
         name: "Vollmilchschokolade mit Nuessen und Kokos",
@@ -189,7 +189,7 @@ var Produkte = [
         preis: 2.49,
         imWarenkorb: 0,
         id: 24,
-        bildpfad: "Images/Tafeln/Vollmilch/Vollmilchschokolade_mit_Nuessen_und_Kokos.PNG"
+        bildpfad: "Images/Tafeln/Vollmilch/Vollmilchschokolade_mit_Nuessen_und_Kokos.png"
     },
     {
         name: "Vollmilchschokolade mit Nuessen",
@@ -197,7 +197,7 @@ var Produkte = [
         preis: 3.49,
         imWarenkorb: 0,
         id: 25,
-        bildpfad: "Images/Tafeln/Vollmilch/Vollmilchschokolade_mit_Nuessen.PNG"
+        bildpfad: "Images/Tafeln/Vollmilch/Vollmilchschokolade_mit_Nuessen.png"
     },
     { //Tafeln - Weiss
         name: "Luftschokolade",
@@ -205,7 +205,7 @@ var Produkte = [
         preis: 3.49,
         imWarenkorb: 0,
         id: 26,
-        bildpfad: "Images/Tafeln/Weiss/Luftschokolade.PNG"
+        bildpfad: "Images/Tafeln/Weiss/Luftschokolade.png"
     },
     {
         name: "Tafeln mit Fruechten",
@@ -213,7 +213,7 @@ var Produkte = [
         preis: 3.49,
         imWarenkorb: 0,
         id: 27,
-        bildpfad: "Images/Tafeln/Weiss/Tafeln_mit_Fruechten.PNG"
+        bildpfad: "Images/Tafeln/Weiss/Tafeln_mit_Fruechten.png"
     },
     {
         name: "Weiss und Vollmilch mit Erdbeer",
@@ -221,7 +221,7 @@ var Produkte = [
         preis: 3.99,
         imWarenkorb: 0,
         id: 28,
-        bildpfad: "Images/Tafeln/Weiss/Tafeln_mit_Fruechten.PNG"
+        bildpfad: "Images/Tafeln/Weiss/Tafeln_mit_Fruechten.png"
     },
     {
         name: "Weisse Schokolade mit Nuessen",
@@ -229,7 +229,7 @@ var Produkte = [
         preis: 3.99,
         imWarenkorb: 0,
         id: 29,
-        bildpfad: "Images/Tafeln/Weiss/Weisse_Schokolade_mit_Nuessen.PNG"
+        bildpfad: "Images/Tafeln/Weiss/Weisse_Schokolade_mit_Nuessen.png"
     },
     {
         name: "Weisse Tafel",
@@ -237,7 +237,7 @@ var Produkte = [
         preis: 2.49,
         imWarenkorb: 0,
         id: 30,
-        bildpfad: "Images/Tafeln/Weiss/Weisse_Tafel.PNG"
+        bildpfad: "Images/Tafeln/Weiss/Weisse_Tafel.png"
     },
     { //Tafeln - Zartbitter
         name: "Brownie Zartbittertafel",
@@ -245,7 +245,7 @@ var Produkte = [
         preis: 3.49,
         imWarenkorb: 0,
         id: 31,
-        bildpfad: "Images/Tafeln/Zartbitter/Brownie_Zartbittertafel.PNG"
+        bildpfad: "Images/Tafeln/Zartbitter/Brownie_Zartbittertafel.png"
     },
     {
         name: "Chili Schokolade",
@@ -253,7 +253,7 @@ var Produkte = [
         preis: 3.99,
         imWarenkorb: 0,
         id: 32,
-        bildpfad: "Images/Tafeln/Zartbitter/Chili_Schokolade.PNG"
+        bildpfad: "Images/Tafeln/Zartbitter/Chili_Schokolade.png"
     },
     {
         name: "Lindtschokolade",
@@ -261,7 +261,7 @@ var Produkte = [
         preis: 3.49,
         imWarenkorb: 0,
         id: 33,
-        bildpfad: "Images/Tafeln/Zartbitter/Lindtschokolade.PNG"
+        bildpfad: "Images/Tafeln/Zartbitter/Lindtschokolade.png"
     },
     {
         name: "Zartbitterschokolade mit Nuessen",
@@ -269,7 +269,7 @@ var Produkte = [
         preis: 3.49,
         imWarenkorb: 0,
         id: 34,
-        bildpfad: "Images/Tafeln/Zartbitter/Zartbitterschokolade_mit_Nuessen.PNG"
+        bildpfad: "Images/Tafeln/Zartbitter/Zartbitterschokolade_mit_Nuessen.png"
     },
     {
         name: "Zartbittertafel",
@@ -277,7 +277,7 @@ var Produkte = [
         preis: 2.49,
         imWarenkorb: 0,
         id: 35,
-        bildpfad: "Images/Tafeln/Zartbitter/Zartbittertafel.PNG"
+        bildpfad: "Images/Tafeln/Zartbitter/Zartbittertafel.png"
     } //Produkte unter diesem Muster hinzufügen
 ]
 
