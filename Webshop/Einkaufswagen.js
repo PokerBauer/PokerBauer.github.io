@@ -370,7 +370,7 @@ function AusgabeEinkaufswagen() {
                         Anzahl: ${Item.imWarenkorb}
                         <button class="anzahlbutton" type="einsMehr" onclick="einsMehr( ${Item.id} )"> Anzahl um 1 erhoehen </button>
                         </div>
-                        <div class="Preise"> Teilpreis:${(Item.imWarenkorb * Item.preis).toFixed(2)} EUR</div>
+                        <div class="Preise"> Teilpreis: ${(Item.imWarenkorb * Item.preis).toFixed(2)} EUR</div>
                         </div>
                         </div>
                         </body>
