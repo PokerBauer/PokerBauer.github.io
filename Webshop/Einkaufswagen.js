@@ -420,7 +420,10 @@ function einsWeniger(ProductID) {
             var name = Produkte[i].bild;
         }
     }
-    ItemsWK[name].imWarenkorb -= 1;
+    if(ItemsWK[name].imWarenkorb == 0) {
+    } else {
+        ItemsWK[name].imWarenkorb -= 1;   
+    }
     localStorage.setItem("ProdukteImWK", JSON.stringify(ItemsWK))
     AusgabeEinkaufswagen();
 }
