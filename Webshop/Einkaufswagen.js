@@ -65,7 +65,7 @@ var Produkte = [
     },
     {
         name: "Feine Erdbeere",
-        bild: "Vollmilch_Praline_Erdbeertopping",
+        bild: "Vollmilch_Praline_mit_Erbeertopping",
         preis: 0.30,
         imWarenkorb: 0,
         id: 9,
