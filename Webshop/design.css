@@ -1,7 +1,7 @@
-a {
-	text-decoration: none;
-	color: #f2f2f2;
-}
+/* Header */
+
+
+
 .header {
    position: absolute;
    top: 0px;
@@ -11,8 +11,7 @@ a {
    padding-top: 0px;
    background-image:linear-gradient(#4f2c11, #ffeeb8);
    height: 80px;
-   width: 100%;
-   
+   width: 100%; 
 }
 
 .header img {
@@ -23,7 +22,7 @@ a {
    margin-top: 5px;
    float: left;
 }
-/* Logotext */
+
 h1 {
    font-size: 60px;
    color: white;
@@ -35,7 +34,6 @@ h1 {
    margin-top: 0px;
    padding-top: 0px;
 }
-/* Produktseiten�berschrift */
 
 h7 {
    font-size: 10px;
@@ -51,22 +49,6 @@ h7 {
    text-align: center;
 }
 
-body {
-   font-family: Helvetica, sans-serif;
-   color: #5f4019;
-   padding: 80px 0 48px;
-   background-image: radial-gradient(#4f2c11, #ffeeb8);
-   overflow-x : hidden;
-   overflow-y : scroll;
-   margin: 0px
-}
-
-
-.wrapper {
-   margin: 0px auto;
-   max-width: 1600px;
-}
-
 .nav {
  overflow: hidden;
  background-image:linear-gradient(#4f2c11, #ffeeb8);  
@@ -79,6 +61,7 @@ body {
  border-top: 2px solid rgba(0,0,0,0.2);
  z-index: 1;
 }
+
 .nav a {
  padding-top: 10px;
  padding-bottom: 10px;
@@ -88,10 +71,10 @@ body {
  width: 33%;
  border-right: 2px solid rgba(0,0,0,0.2);
 }
+
 .nav a:last-child {
    border-right: none;
 }
-
 
 .nav a:hover {
  color: black;
@@ -102,9 +85,39 @@ body {
    width: 3%;
    margin-left: 10px;
    float: center-right;
-   margin-bottom: -5px;
-   
+   margin-bottom: -5px;  
 }
+
+/* ------------------------------------- */
+
+
+
+
+/* Startseite */
+h5 {
+   font-size: 25px;
+   color: white;
+   text-shadow: 5px 1px 10px black;
+   font-family: Helvetica, sans-serif;
+   font-style: oblique;
+   letter-spacing: 1px;
+}
+
+body {
+   font-family: Helvetica, sans-serif;
+   color: #5f4019;
+   padding: 80px 0 48px;
+   background-image: radial-gradient(#4f2c11, #ffeeb8);
+   overflow-x : hidden;
+   overflow-y : scroll;
+   margin: 0px
+}
+
+.wrapper {
+   margin: 0px auto;
+   max-width: 1600px;
+}
+
 .angebotsrahmen {
    height: 400px;
    width: 90%;
@@ -112,9 +125,8 @@ body {
    background-color: transparent;
    padding-bottom: 7%;
    padding-top: 5%;
-
-   
 }
+
 .angebot {
    width: 25%;
    height: 250px;
@@ -124,48 +136,38 @@ body {
    display: inline-block;
    background-image:linear-gradient(#4f2c11, #ffeeb8);  
 }
-.leer{
-   text-align: center;
-   margin-top: 10%;
-   height: 500px;
+
+.angebot:hover {
+   border: 2px solid red;
 }
 
-.leer h3{
-   font-size: 40px;
-   text-shadow: 5px 1px 10px black;
-   font-family: Helvetica, sans-serif;
-}
-
-.produktbild {
-   float: left;
-   margin-top: 10%;
-   height: 250px;
-   width: 250px;
-   border:  2px solid rgba(0,0,0,0.8);
-   margin-left: 20%;
-   background-image:linear-gradient(#4f2c11, #ffeeb8);  
-}
-.produktbildwk {
-   float:center;
-   margin-top: 10%;
-   border:  2px solid rgba(0,0,0,0.8);
-   margin-left: 2%;
-   margin-right: 2%;
-   background-image:linear-gradient(#4f2c11, #ffeeb8);  
-   }
-
-.produktentfernen {
-   background: transparent;
-   background-image:linear-gradient(#4f2c11, #ffeeb8);
-}
-.produktbild img{
-   width: 100%;
+.angebot img {
    height: 100%;
-}
-.produktbildwk img{
    width: 100%;
-   height: 100%;
+   margin: 0 auto;
 }
+
+.bss {
+   width: 50%;
+   height:400px;
+   margin: 0 auto;
+   background-color:#FFA500;
+}	
+.bss img {
+   height: 100%;
+   width: 100%;
+   box-shadow: 8px 8px 8px #4f2c11;
+}
+
+/* ------------------------------------------------------ */
+
+
+a {
+	text-decoration: none;
+	color: #f2f2f2;
+}
+
+
 
 
 /* einzelne Produktseiten */
@@ -249,6 +251,10 @@ h6 {
 }
 /*---------------------------------------------*/
 
+
+
+/* Warenkorb */
+
 .ProdukteWK {
    text-align: center;
    width: 100%;
@@ -279,49 +285,52 @@ h6 {
    background: linear-gradient(#4f2c11, #ffeeb8);
 }
 
-.angebot:hover {
-   border: 2px solid red;
-}
-.angebot img {
-   height: 100%;
-   width: 100%;
-   margin: 0 auto;
-}
-
-.bss {
-   width: 50%;
-   height:400px;
-   margin: 0 auto;
-   background-color:#FFA500;
-}	
-.bss img {
-   height: 100%;
-   width: 100%;
-   box-shadow: 8px 8px 8px #4f2c11;
-}
-
-.footer {
+.leer{
    text-align: center;
-   position: fixed;
-   padding-top: 10px;
-   padding-bottom: 10px;	
-   bottom: 0px;
-   left: 0px;
-   right: 0px;
-   font-size: 20px;
-   background-image:linear-gradient(#4f2c11, #ffeeb8);
+   margin-top: 10%;
+   height: 500px;
 }
-/* Startseite */
-h5 {
-   font-size: 25px;
-   color: white;
+
+.leer h3{
+   font-size: 40px;
    text-shadow: 5px 1px 10px black;
    font-family: Helvetica, sans-serif;
-   font-style: oblique;
-   letter-spacing: 1px;
-
 }
-/* Warenkorb */
+
+.produktbild {
+   float: left;
+   margin-top: 10%;
+   height: 250px;
+   width: 250px;
+   border:  2px solid rgba(0,0,0,0.8);
+   margin-left: 20%;
+   background-image:linear-gradient(#4f2c11, #ffeeb8);  
+}
+
+.produktbildwk {
+   float:center;
+   margin-top: 10%;
+   border:  2px solid rgba(0,0,0,0.8);
+   margin-left: 2%;
+   margin-right: 2%;
+   background-image:linear-gradient(#4f2c11, #ffeeb8);  
+   }
+
+.produktentfernen {
+   background: transparent;
+   background-image:linear-gradient(#4f2c11, #ffeeb8);
+}
+
+.produktbild img{
+   width: 100%;
+   height: 100%;
+}
+
+.produktbildwk img{
+   width: 100%;
+   height: 100%;
+}
+
 .anzahlbutton {
    display: block;
    margin-left: auto;
@@ -333,6 +342,9 @@ h5 {
    margin-top: 3%;
    margin-bottom: 3%;
 }
+
+
+
 /* Produktkatalog */
 h8 {
 font-size: 25px;
@@ -380,8 +392,6 @@ font-size: 15px;
    top: 0;
    padding-right: 8%;
 }
-
-
 	   
 .columnright {
    width: 100%; 
@@ -392,16 +402,14 @@ font-size: 15px;
 /* Control Buttons Div Box */		
 .btnContainer{
 	   padding-left: 15px;
-	   position: fixed;
-	   
+	   position: fixed;   
 }
 
 /* Link */
 .aLink {
 	   text-decoration: none;
    color:#f2f2f2;
-}
-	   
+}	   
 /* Filter Button */
 	   
 .filter_btn {
@@ -412,15 +420,13 @@ font-size: 15px;
 	   outline: none;
 	   display: block;
 	   margin-left: 20%;
-	   margin-top: 2%;
-	   
+	   margin-top: 2%;	   
 }
 	   
 .filter_btn:hover {
 	   text-decoration: underline;
 }
-	   
-	   
+	      
 .filterDiv {
 	   float: left;
 	   display: none;
@@ -458,10 +464,7 @@ font-size: 15px;
 .show {
 	   display: block;
 }
-
-	   
-
-	   
+   
 /* Break */
 	   
 .brmedium {
@@ -476,4 +479,18 @@ font-size: 15px;
 .imp {
    text-align: center;
    margin-top: 5%;
+}
+/* ----------------------------------*/ 
+
+/* Footer */
+.footer {
+   text-align: center;
+   position: fixed;
+   padding-top: 10px;
+   padding-bottom: 10px;	
+   bottom: 0px;
+   left: 0px;
+   right: 0px;
+   font-size: 20px;
+   background-image:linear-gradient(#4f2c11, #ffeeb8);
 }
