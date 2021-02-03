@@ -369,7 +369,7 @@ function AusgabeEinkaufswagen() {
                         Anzahl: ${Item.imWarenkorb}
                         <button class="anzahlbutton" type="einsMehr" onclick="einsMehr( ${Item.id} )"> Anzahl um 1 erhoehen </button>
                         </div>
-                        <div class="Preise"> Teilpreis:${(Item.imWarenkorb * Item.preis).toFixed(2)} EUR</div>
+                        <div class="Preise"> Teilpreis: ${(Item.imWarenkorb * Item.preis).toFixed(2)} EUR</div>
                         </div>
                         </div>
                         </body>
@@ -377,7 +377,7 @@ function AusgabeEinkaufswagen() {
         });//erstellt html-code der den Warenkorb darstellt
         InhaltWarenkorb.innerHTML += `
             <div class="Gesamtpreis">
-            <h4 class="GesamtpreisTitel"> Gesamtpreis:${GesamtPreis2} EUR </h4>
+            <h4 class="GesamtpreisTitel"> Gesamtpreis: ${GesamtPreis2} EUR </h4>
             </div>
             <button class="warenkorbleeren" type="WarenkorbLeeren" onclick="WarenkorbLeer()"> <h6>Warenkorb komplett leeren</h6></button>
             `
