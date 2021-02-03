@@ -354,25 +354,27 @@ function AusgabeEinkaufswagen() {
         Object.values(ItemsWK2).map(Item => {
             InhaltWarenkorb.innerHTML += `
 
-                        <body>
                         <div class="warenkorbitem">
-                        <div class="ProdukteWK"> 
-                        <button class="produktentfernen" type="Entfernen" onclick="produktLoeschen(${Item.id})"> <h6>Produkt aus dem Warenkorb entfernen</h6> </button>
-                        <div class="produktbildwk">
-                        <img src ="${Item.bildpfad}"></img>
-                        </div>
-                        <h7>${Item.name}</h7>
+                            <div class="ProdukteWK"> 
+                                <div class="produktbildwk">
+                                    <img src ="${Item.bildpfad}"></img>
+                                </div>
+                                <h7>${Item.name}</h7>
                         
-                        <div class="Preis">${(Item.preis).toFixed(2)} EUR / Stueck</div>
-                        <div class="Anzahl">
-                        <button class="anzahlbutton" type="einsWeniger" onclick="einsWeniger( ${Item.id} )"> Anzahl um 1 verringern </button>
-                        Anzahl: ${Item.imWarenkorb}
-                        <button class="anzahlbutton" type="einsMehr" onclick="einsMehr( ${Item.id} )"> Anzahl um 1 erhoehen </button>
+                                <div class="Preis">
+                                    ${(Item.preis).toFixed(2)} EUR / Stueck
+                                </div>
+                                <div class="Anzahl">
+                                    <button class="anzahlbutton" type="einsWeniger" onclick="einsWeniger( ${Item.id} )"> Anzahl um 1 verringern </button>
+                                    Anzahl: ${Item.imWarenkorb}
+                                    <button class="anzahlbutton" type="einsMehr" onclick="einsMehr( ${Item.id} )"> Anzahl um 1 erhoehen </button>
+                                </div>
+                                <div class="Preise"> 
+                                    Teilpreis: ${(Item.imWarenkorb * Item.preis).toFixed(2)} EUR
+                                </div>
+                                <button class="produktentfernen" type="Entfernen" onclick="produktLoeschen(${Item.id})"> <h6>Produkt aus dem Warenkorb entfernen</h6> </button>
+                            </div>
                         </div>
-                        <div class="Preise"> Teilpreis: ${(Item.imWarenkorb * Item.preis).toFixed(2)} EUR</div>
-                        </div>
-                        </div>
-                        </body>
                         `
         });//erstellt html-code der den Warenkorb darstellt
         InhaltWarenkorb.innerHTML += `
@@ -384,7 +386,11 @@ function AusgabeEinkaufswagen() {
         //erstellt html-code der den Gesamtpreis darstellt
     } else {
         InhaltWarenkorb.innerHTML = "";
-        InhaltWarenkorb.innerHTML += `<h3>Ihr Warenkorb ist leer!</h3>`;
+        InhaltWarenkorb.innerHTML += `
+        <div class="leer">
+            <h3>Ihr Warenkorb ist leer!</h3>
+        </div>
+        `;
     } //Wird nur ausgegeben wenn der Warenkorb leer ist
 }
 
