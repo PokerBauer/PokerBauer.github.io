@@ -40,7 +40,7 @@ var Produkte = [
         bildpfad: "Images/Geschenkset/Trueffel_Geschenkbox.png"
     },
     { //Pralinen - Vollmilch
-        name: "Mix aus Weiss und Vollmilch Dreierlei",
+        name: "Triple Chocolate",
         bild: "Mix_aus_Weiss_und_Vollmilch_Dreierlei",
         preis: 3.50,
         imWarenkorb: 0,
@@ -48,7 +48,7 @@ var Produkte = [
         bildpfad: "Images/Pralinen/Vollmilch/Mix_aus_Weiss_und_Vollmilch_Dreierlei.png"
     },
     {
-        name: "Mouse gefuellte Praline",
+        name: "Schokoladen Mouse - Traum",
         bild: "Mouse_gefuellte_Praline",
         preis: 2.90,
         imWarenkorb: 0,
@@ -56,7 +56,7 @@ var Produkte = [
         bildpfad: "Images/Pralinen/Vollmilch/Mouse_gefuellte_Praline.png"
     },
     {
-        name: "Praline mit Mouse und fluessiger Schokolade",
+        name: "Lava Praline",
         bild: "Praline_mit_Mouse_und_fluessiger_Schokolade",
         preis: 0.30,
         imWarenkorb: 0,
@@ -64,7 +64,7 @@ var Produkte = [
         bildpfad: "Images/Pralinen/Vollmilch/Praline_mit_Mouse_und_fluessiger_Schokolade.png"
     },
     {
-        name: "Vollmilch Praline Erdbeertopping",
+        name: "Feine Erdbeere",
         bild: "Vollmilch_Praline_Erdbeertopping",
         preis: 0.30,
         imWarenkorb: 0,
@@ -72,7 +72,7 @@ var Produkte = [
         bildpfad: "Images/Pralinen/Vollmilch/Vollmilch_Praline_Erdbeertopping.png"
     },
     {
-        name: "Vollmilch Praline mit Nuss Karamell oder Zartbitter Topping",
+        name: "Vollmilch Genussmix",
         bild: "Vollmilch_Praline_mit_Nuss_Karamell_oder_Zartbitter_Topping",
         preis: 0.25,
         imWarenkorb: 0,
@@ -80,7 +80,7 @@ var Produkte = [
         bildpfad: "Images/Pralinen/Vollmilch/Vollmilch_Praline_mit_Nuss_Karamell_oder_Zartbitter_Topping.png"
     },
     {//Pralinen - Weiss
-        name: "Die weissen Berge",
+        name: "Schneeweiße Berge",
         bild: "Die_weissen_Berge",
         preis: 1.90,
         imWarenkorb: 0,
@@ -96,7 +96,7 @@ var Produkte = [
         bildpfad: "Images/Pralinen/Weiss/Erdbeertraum.png"
     },
     {
-        name: "Gefuellte Praline mit Mouse Topping",
+        name: "Fruchtiges Rendezvous",
         bild: "Gefuellte_Praline_mit_Mouse_Topping",
         preis: 0.33,
         imWarenkorb: 0,
@@ -104,7 +104,7 @@ var Produkte = [
         bildpfad: "Images/Pralinen/Weiss/Gefuellte_Praline_mit_Mouse_Topping.png"
     },
     {
-        name: "Kokoskugel mit Nussfuellung",
+        name: "Feine Kokoskugel",
         bild: "Kokoskugel_mit_Nussfuellung",
         preis: 0.30,
         imWarenkorb: 0,
@@ -112,7 +112,7 @@ var Produkte = [
         bildpfad: "Images/Pralinen/Weiss/Kokoskugel_mit_Nussfuellung.png"
     },
     {
-        name: "Praline mit Roellchen",
+        name: "Buttersahne-Trüffel",
         bild: "Praline_mit_Roellchen",
         preis: 0.30,
         imWarenkorb: 0,
@@ -120,7 +120,7 @@ var Produkte = [
         bildpfad: "Images/Pralinen/Weiss/Praline_mit_Roellchen.png"
     },
     { //Pralinen - Zartbitte
-        name: "Drei Schokokugeln",
+        name: "Feinste Zartbitterkugeln",
         bild: "Drei_Schokokugeln",
         preis: 2.90,
         imWarenkorb: 0,
@@ -128,7 +128,7 @@ var Produkte = [
         bildpfad: "Images/Pralinen/Zartbitter/Drei_Schokokugeln.png"
     },
     {
-        name: "Mouse gefuellt mit Erdbeerglasur",
+        name: "Erdbeer-Mouse - Traum",
         bild: "Mouse_gefuellt_mit_Erdbeerglasur",
         preis: 0.33,
         imWarenkorb: 0,
@@ -136,7 +136,7 @@ var Produkte = [
         bildpfad: "Images/Pralinen/Zartbitter/Mouse_gefuellt_mit_Erdbeerglasur.png"
     },
     {
-        name: "Praline mit fluessigem Kern",
+        name: "Flüssige Verführung",
         bild: "Praline_mit_fluessigem_Kern",
         preis: 0.33,
         imWarenkorb: 0,
@@ -144,7 +144,7 @@ var Produkte = [
         bildpfad: "Images/Pralinen/Zartbitter/Praline_mit_fluessigem_Kern.png"
     },
     {
-        name: "Zartbitterkugel mit Goldglasur",
+        name: "Goldschatz",
         bild: "Zartbitterkugel_mit_Goldglasur",
         preis: 0.25,
         imWarenkorb: 0,
@@ -152,7 +152,7 @@ var Produkte = [
         bildpfad: "Images/Pralinen/Zartbitter/Zartbitterkugel_mit_Goldglasur.png"
     },
     {
-        name: "Zartbitterpraline",
+        name: "Marzipan Traum",
         bild: "Zartbitterpraline",
         preis: 0.25,
         imWarenkorb: 0,
@@ -302,7 +302,7 @@ function setItems(Produkte) {
     var valueOfInput = inputWithNumberOfItems.value;
     valueOfInput = parseInt(valueOfInput);
 
-    if (ItemsWK != null) { //wenn bereits vorhanden ist
+    if (ItemsWK != null) {
         if (ItemsWK[Produkte.bild] == undefined) {
             ItemsWK = {
                 ...ItemsWK,
@@ -321,7 +321,6 @@ function setItems(Produkte) {
 
 
 function AusgabeEinkaufswagen() {
-    //imWKcleaner();
     let ItemsWK = localStorage.getItem("ProdukteImWK");
     ItemsWK = JSON.parse(ItemsWK); //erstellt nutzbare variable mit den aktuellen Warenkorb inhalt
 
