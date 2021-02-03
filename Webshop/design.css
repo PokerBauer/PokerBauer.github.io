@@ -110,8 +110,8 @@ body {
 	width: 90%;
 	margin: 0 auto;
 	background-color: transparent;
-	padding-bottom: 10px;
-	padding-top: 30px;
+	padding-bottom: 7%;
+	padding-top: 5%;
 
 	
 }
@@ -268,20 +268,6 @@ h6 {
 	height: 100%;
 	width: 100%;
 	margin: 0 auto;
-}
-
-.mehr a {
-	color: #5f4019;
-	float: right;
-	margin-right: 40px;
-	margin-top: 10px;
-	padding: 5px;
-	border:  2px solid rgba(0,0,0,0.1);
-	background-color: transparent;
-	box-shadow: 5px 1px 10px #e88b45;
-}
-.mehr a:hover {
-	box-shadow: 5px 1px 5px #e88b45;
 }
 
 .bss {
