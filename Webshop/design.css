@@ -238,16 +238,26 @@ h6 {
 
 .ProdukteWK {
 	text-align: center;
+	width: 100%;
+	height: 100%;
 }
 .produktname {
     padding-top: 20px;
 	text-align: center;
 }
+.Gesamtpreis {
+	text-align: center;
+}
+
+.warenkorbleeren {
+	margin-left: 40%;
+	background: linear-gradient(#4f2c11, #ffeeb8);
+}
 
 .warenkorbitem {
 	display: inline-block;
-	width: 29%;
-	margin: 2%;
+	width: 24%;
+	margin: 4%;
 	background: linear-gradient(#4f2c11, #ffeeb8);
 }
 
@@ -352,7 +362,7 @@ font-size: 10px;
 	min-width: 205px;
 	vertical-align: top; 
 	position: fixed;
-	border-right: 5px solid rgba(0,0,0,0.2);
+	border-right: 5px solid rgba(0,0,0,0.4);
 	border-right-style: double;
 	position: absolute;
 	top: 0;
@@ -403,7 +413,7 @@ font-size: 10px;
         float: left;
         display: none;
         padding: 7.5px;
-		border:  2px solid rgba(0,0,0,0.3);
+		border:  2px solid rgba(0,0,0,0.5);
 		margin-right: 20px;
 		margin-bottom: 20px;
 }
