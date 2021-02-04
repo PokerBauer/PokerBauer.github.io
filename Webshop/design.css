@@ -138,7 +138,7 @@ body {
 }
 
 .angebot:hover {
-   border: 2px solid red;
+   border: 2px solid white;
 }
 
 .angebot img {
@@ -437,6 +437,9 @@ font-size: 15px;
       background: linear-gradient(#4f2c11, #ffeeb8);
 }
 
+.filterDiv:hover{
+   border: 2px solid white; 
+}
 /* Products Div Box */
 .subElem {
    color:#f2f2f2;
